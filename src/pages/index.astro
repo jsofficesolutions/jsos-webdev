@@ -3,22 +3,23 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="JS Office Solutions | High-Performance Websites for Small Businesses">
+    <!-- Background Canvas with reduced opacity so text remains beautifully readable -->
     <div class="fixed inset-0 z-0 pointer-events-none">
-        <canvas id="polygonCanvas" class="w-full h-full opacity-30"></canvas>
+        <canvas id="polygonCanvas" class="w-full h-full opacity-20"></canvas>
     </div>
 
-    <nav class="fixed w-full z-50 bg-jsos-black/80 backdrop-blur-lg border-b border-white/5 transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav class="fixed w-full z-50 bg-jsos-black/90 backdrop-blur-xl border-b border-white/10 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 bg-jsos-purple rounded-xl flex items-center justify-center text-white font-extrabold text-lg group-hover:scale-105 transition-transform duration-300 shadow-[0_0_15px_rgba(102,51,153,0.4)]">
+                <div class="w-11 h-11 bg-jsos-purple rounded-xl flex items-center justify-center text-white font-extrabold text-xl group-hover:scale-105 transition-transform duration-300 shadow-[0_0_15px_rgba(102,51,153,0.4)]">
                     JS
                 </div>
-                <span class="text-2xl font-bold tracking-tight text-white font-heading">
-                    JS<span class="text-jsos-purple">OS</span>
+                <span class="text-2xl font-black tracking-tight text-white font-heading">
+                    JS<span class="text-jsos-purpleLight">OS</span>
                 </span>
             </a>
             
-            <div class="hidden md:flex space-x-10 text-sm font-semibold tracking-wider uppercase text-jsos-grey">
+            <div class="hidden md:flex space-x-8 text-sm font-bold tracking-wider uppercase text-jsos-grey">
                 <a href="#services" class="hover:text-white transition-colors py-2">What We Do</a>
                 <a href="#estimator" class="hover:text-white transition-colors py-2">Price Calculator</a>
                 <a href="#portfolio" class="hover:text-white transition-colors py-2">Our Work</a>
@@ -29,75 +30,77 @@ import Layout from '../layouts/Layout.astro';
                 LET'S TALK
             </a>
 
-            <button class="md:hidden text-white p-2 focus:outline-none" id="mobileMenuButton">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <button class="md:hidden text-white p-2 focus:outline-none" id="mobileMenuButton" aria-label="Toggle Menu">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
 
         <div class="hidden" id="mobileMenu">
-            <div class="px-6 pt-2 pb-6 bg-jsos-black/95 border-b border-white/10 flex flex-col space-y-4 text-center">
-                <a href="#services" class="text-lg font-medium text-white py-2">What We Do</a>
-                <a href="#estimator" class="text-lg font-medium text-white py-2">Price Calculator</a>
-                <a href="#portfolio" class="text-lg font-medium text-white py-2">Our Work</a>
-                <a href="#approach" class="text-lg font-medium text-white py-2">Why It Matters</a>
-                <a href="#contact" class="bg-jsos-purple text-white py-3 rounded-xl font-bold uppercase tracking-wider">LET'S TALK</a>
+            <div class="px-6 pt-2 pb-8 bg-jsos-black border-b border-white/10 flex flex-col space-y-4 text-center shadow-2xl">
+                <a href="#services" class="text-lg font-bold text-white py-2.5 hover:text-jsos-purpleLight">What We Do</a>
+                <a href="#estimator" class="text-lg font-bold text-white py-2.5 hover:text-jsos-purpleLight">Price Calculator</a>
+                <a href="#portfolio" class="text-lg font-bold text-white py-2.5 hover:text-jsos-purpleLight">Our Work</a>
+                <a href="#approach" class="text-lg font-bold text-white py-2.5 hover:text-jsos-purpleLight">Why It Matters</a>
+                <a href="#contact" class="bg-jsos-purple text-white py-3.5 rounded-xl font-bold uppercase tracking-wider hover:bg-purple-700 transition-colors">LET'S TALK</a>
             </div>
         </div>
     </nav>
 
     <main class="relative z-10">
-        <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden">
             <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-jsos-purple/15 rounded-full blur-[160px] pointer-events-none"></div>
 
             <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-16 items-center">
                 <div class="lg:col-span-7 text-left space-y-8">
-                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-jsos-purple/10 border border-jsos-purple/20">
+                    <div class="inline-flex items-center gap-2.5 px-4.5 py-2 rounded-full bg-jsos-purple/15 border border-jsos-purple/30">
                         <span class="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"></span>
-                        <span class="text-xs font-semibold uppercase tracking-wider text-jsos-purple">Built For Business Growth</span>
+                        <span class="text-xs font-bold uppercase tracking-wider text-jsos-purpleLight">Built For Business Growth</span>
                     </div>
                     
-                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05] font-heading text-white">
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.08] font-heading text-white">
                         Websites built to <br />
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-jsos-purple via-purple-400 to-white" id="typingText"></span><span class="text-jsos-purple font-light">|</span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-jsos-purpleLight via-purple-300 to-white" id="typingText"></span><span class="text-jsos-purpleLight font-light">|</span>
                     </h1>
                     
-                    <p class="text-lg md:text-xl text-jsos-grey max-w-xl leading-relaxed">
+                    <p class="text-lg md:text-xl text-jsos-grey max-w-xl leading-relaxed font-medium">
                         We build ultra-fast, custom websites that turn local search traffic into paying clients. Say goodbye to slow templates that frustrate your visitors.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-5 pt-4">
-                        <a href="#contact" class="px-8 py-4 bg-jsos-purple text-white font-bold rounded-xl hover:bg-purple-700 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(102,51,153,0.8)] transition-all duration-300 text-center flex items-center justify-center gap-3 tracking-wider uppercase text-sm">
+                        <a href="#contact" class="px-8 py-4.5 bg-jsos-purple text-white font-extrabold rounded-xl hover:bg-purple-700 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(102,51,153,0.8)] transition-all duration-300 text-center flex items-center justify-center gap-3 tracking-wider uppercase text-sm">
                             Get A Free Proposal
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="#portfolio" class="px-8 py-4 glass-card text-white font-bold rounded-xl hover:bg-white/10 transition-all duration-300 text-center text-sm uppercase tracking-wider">
+                        <a href="#portfolio" class="px-8 py-4.5 glass-card text-white font-extrabold rounded-xl hover:bg-white/10 transition-all duration-300 text-center text-sm uppercase tracking-wider">
                             See Our Work
                         </a>
                     </div>
                 </div>
 
+                <!-- Floating Code Window - Highly legible typography -->
                 <div class="lg:col-span-5 relative hidden lg:block animate-float">
-                    <div class="relative w-full aspect-square max-w-[500px] mx-auto">
-                        <div class="absolute inset-2 glass-card rounded-3xl p-6 flex flex-col gap-4 shadow-2xl overflow-hidden z-20">
-                            <div class="flex items-center justify-between border-b border-white/5 pb-4">
+                    <div class="relative w-full aspect-square max-w-[480px] mx-auto">
+                        <div class="absolute inset-2 glass-card rounded-3xl p-8 flex flex-col gap-5 shadow-2xl overflow-hidden z-20">
+                            <div class="flex items-center justify-between border-b border-white/10 pb-4">
                                 <div class="flex items-center gap-2">
-                                    <span class="w-3 h-3 rounded-full bg-red-500"></span>
-                                    <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
-                                    <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-red-500"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-yellow-500"></span>
+                                    <span class="w-3.5 h-3.5 rounded-full bg-green-500"></span>
                                 </div>
-                                <span class="text-xs px-2.5 py-0.5 bg-green-400/10 text-green-400 rounded-full font-bold">100% Mobile Optimized</span>
+                                <span class="text-xs px-3 py-1 bg-green-400/10 text-green-400 rounded-full font-bold">100% Mobile Optimized</span>
                             </div>
-                            <div class="font-mono text-xs space-y-3.5 flex-1 select-none text-jsos-grey">
-                                <p class="text-jsos-purple">&lt;LocalBusiness&gt;</p>
-                                <p class="text-blue-300 pl-4">Fast Loading Speed: <span class="text-green-400">Excellent</span></p>
-                                <p class="text-blue-300 pl-4">Google Search SEO: <span class="text-green-400">Optimized</span></p>
-                                <p class="text-blue-300 pl-4">Secure Hosting: <span class="text-green-400">Included</span></p>
-                                <p class="text-jsos-purple">&lt;/LocalBusiness&gt;</p>
-                                <div class="pt-4 border-t border-white/5 flex justify-between items-center text-[10px]">
-                                    <span class="text-emerald-400 font-bold flex items-center gap-1">
+                            <div class="font-mono text-sm space-y-4 flex-1 select-none text-jsos-grey leading-relaxed">
+                                <p class="text-jsos-purpleLight font-bold">&lt;LocalBusiness&gt;</p>
+                                <p class="text-blue-300 pl-4">Fast Loading Speed: <span class="text-green-400 font-bold">Excellent</span></p>
+                                <p class="text-blue-300 pl-4">Google Search SEO: <span class="text-green-400 font-bold">Optimized</span></p>
+                                <p class="text-blue-300 pl-4">Secure Hosting: <span class="text-green-400 font-bold">Included</span></p>
+                                <p class="text-jsos-purpleLight font-bold">&lt;/LocalBusiness&gt;</p>
+                                <div class="pt-6 border-t border-white/10 flex justify-between items-center text-[11px]">
+                                    <span class="text-emerald-400 font-bold flex items-center gap-1.5">
                                         <i class="fa-solid fa-shield-halved"></i> Enterprise-Grade Security
                                     </span>
-                                    <span class="text-jsos-grey">Based in Essex</span>
+                                    <span class="text-white font-semibold">Based in Essex</span>
                                 </div>
                             </div>
                         </div>
@@ -107,94 +110,117 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
+        <!-- Services Section -->
         <section id="services" class="py-32 relative bg-jsos-darkgrey/40">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="watermark-container text-center mb-24">
                     <span class="watermark-text">SERVICES</span>
-                    <h2 class="text-jsos-purple font-bold uppercase tracking-widest text-sm mb-4">WHAT WE DELIVER</h2>
+                    <h2 class="text-jsos-purpleLight font-bold uppercase tracking-widest text-sm mb-4">WHAT WE DELIVER</h2>
                     <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Everything You Need to Win Online</h3>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="glass-card p-10 rounded-2xl transition-all duration-300 group border border-white/5 relative overflow-hidden">
-                        <div class="w-14 h-14 bg-jsos-purple/20 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fa-solid fa-bolt text-2xl text-jsos-purple"></i>
+                        <div class="w-16 h-16 bg-jsos-purple/30 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-bolt text-2xl text-jsos-purpleLight"></i>
                         </div>
                         <h4 class="text-2xl font-bold mb-4 font-heading text-white">Lightning-Fast Sites</h4>
-                        <p class="text-jsos-grey leading-relaxed">
+                        <p class="text-jsos-grey leading-relaxed font-medium">
                             Most business sites are bogged down by clunky, outdated plugins. We custom-code your site from the ground up so it loads instantly on every smartphone, ensuring you never lose a customer to a slow page load.
                         </p>
                     </div>
 
                     <div class="glass-card p-10 rounded-2xl transition-all duration-300 group border border-white/5 relative overflow-hidden">
-                        <div class="w-14 h-14 bg-jsos-purple/20 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fa-solid fa-basket-shopping text-2xl text-jsos-purple"></i>
+                        <div class="w-16 h-16 bg-jsos-purple/30 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-basket-shopping text-2xl text-jsos-purpleLight"></i>
                         </div>
                         <h4 class="text-2xl font-bold mb-4 font-heading text-white">Seamless Online Shops</h4>
-                        <p class="text-jsos-grey leading-relaxed">
+                        <p class="text-jsos-grey leading-relaxed font-medium">
                             Ready to accept payments or manage bookings online? We integrate secure checkout flows and scheduling systems right into your site, making it effortless for your clients to do business with you.
                         </p>
                     </div>
 
                     <div class="glass-card p-10 rounded-2xl transition-all duration-300 group border border-white/5 relative overflow-hidden">
-                        <div class="w-14 h-14 bg-jsos-purple/20 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fa-solid fa-lock text-2xl text-jsos-purple"></i>
+                        <div class="w-16 h-16 bg-jsos-purple/30 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid fa-lock text-2xl text-jsos-purpleLight"></i>
                         </div>
                         <h4 class="text-2xl font-bold mb-4 font-heading text-white">Bulletproof Security</h4>
-                        <p class="text-jsos-grey leading-relaxed">
-                            Leveraging our background in IT systems administration, we lock down your site to make it practically immune to hacking attempts. Sleep easy knowing your customer data and business asset remain perfectly safe.
+                        <p class="text-jsos-grey leading-relaxed font-medium">
+                            Leveraging our background in IT systems administration, we lock down your site to make it practically immune to hacking attempts. Sleep easy knowing your customer data and business assets remain perfectly safe.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Pricing Estimator Section -->
         <section id="estimator" class="py-32 relative bg-jsos-black">
             <div class="max-w-4xl mx-auto px-6">
                 <div class="watermark-container text-center mb-16">
                     <span class="watermark-text">PRICING</span>
-                    <h2 class="text-jsos-purple font-bold uppercase tracking-widest text-sm mb-4">TRANSPARENT VALUE</h2>
+                    <h2 class="text-jsos-purpleLight font-bold uppercase tracking-widest text-sm mb-4">TRANSPARENT VALUE</h2>
                     <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Build Your Plan</h3>
                 </div>
 
                 <div class="glass-card p-8 md:p-12 rounded-3xl border border-white/10 space-y-8">
-                    <p class="text-center text-jsos-grey">Adjust the configuration below to view a ballpark estimate for your brand new custom website.</p>
+                    <p class="text-center text-jsos-grey text-base font-medium">Adjust the configuration below to view a ballpark estimate for your brand new custom website.</p>
                     
-                    <div class="grid md:grid-cols-2 gap-8 pt-4">
-                        <div class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-10 pt-4">
+                        <div class="space-y-8">
                             <div>
-                                <label class="block text-sm font-semibold uppercase tracking-wider text-white mb-2" id="pageLabel">
-                                    Number of Core Pages: <span class="text-jsos-purple" id="pageValue">5</span>
+                                <label class="block text-sm font-bold uppercase tracking-wider text-white mb-3" id="pageLabel">
+                                    Number of Core Pages: <span class="text-jsos-purpleLight text-lg font-black" id="pageValue">5</span>
                                 </label>
-                                <input type="range" min="1" max="25" value="5" class="w-full accent-jsos-purple h-2 bg-white/10 rounded-lg appearance-none cursor-pointer" id="pageRange">
+                                <!-- Enhanced Custom Slider Input -->
+                                <div class="relative flex items-center py-2">
+                                    <input type="range" min="1" max="25" value="5" class="w-full h-2.5 bg-white/10 rounded-lg appearance-none cursor-pointer accent-jsos-purpleLight focus:outline-none focus:ring-2 focus:ring-jsos-purpleLight/50" id="pageRange">
+                                </div>
+                                <div class="flex justify-between text-xs text-jsos-grey mt-1 font-bold">
+                                    <span>1 PAGE</span>
+                                    <span>12 PAGES</span>
+                                    <span>25 PAGES</span>
+                                </div>
                             </div>
 
-                            <div>
-                                <span class="block text-sm font-semibold uppercase tracking-wider text-white mb-3">Optional Add-ons</span>
-                                <div class="space-y-3">
-                                    <label class="flex items-center gap-3 cursor-pointer">
-                                        <input type="checkbox" id="ecommerceOpt" class="w-4 h-4 rounded text-jsos-purple accent-jsos-purple bg-white/10 border-none">
-                                        <span class="text-sm text-jsos-grey hover:text-white">Online Store / Product Setup (+£950)</span>
+                            <!-- Redesigned Option Add-ons to be large, accessible, tap-friendly buttons -->
+                            <div class="space-y-4">
+                                <span class="block text-sm font-bold uppercase tracking-wider text-white mb-1">Optional Add-ons</span>
+                                <div class="space-y-3.5">
+                                    <label class="flex items-center gap-4 p-4.5 bg-white/[0.02] hover:bg-white/[0.05] border border-white/10 hover:border-jsos-purpleLight/40 rounded-xl cursor-pointer transition-all duration-200 select-none">
+                                        <input type="checkbox" id="ecommerceOpt" class="w-5 h-5 rounded text-jsos-purple accent-jsos-purpleLight cursor-pointer">
+                                        <div class="flex-1">
+                                            <span class="block text-sm font-bold text-white leading-tight">Online Store & Booking Setup</span>
+                                            <span class="block text-xs text-jsos-grey font-medium mt-0.5">+£950 Add-on</span>
+                                        </div>
                                     </label>
-                                    <label class="flex items-center gap-3 cursor-pointer">
-                                        <input type="checkbox" id="cmsOpt" class="w-4 h-4 rounded text-jsos-purple accent-jsos-purple bg-white/10 border-none">
-                                        <span class="text-sm text-jsos-grey hover:text-white">Content Editing Dashboard (+£600)</span>
+                                    
+                                    <label class="flex items-center gap-4 p-4.5 bg-white/[0.02] hover:bg-white/[0.05] border border-white/10 hover:border-jsos-purpleLight/40 rounded-xl cursor-pointer transition-all duration-200 select-none">
+                                        <input type="checkbox" id="cmsOpt" class="w-5 h-5 rounded text-jsos-purple accent-jsos-purpleLight cursor-pointer">
+                                        <div class="flex-1">
+                                            <span class="block text-sm font-bold text-white leading-tight">Content Editing Dashboard</span>
+                                            <span class="block text-xs text-jsos-grey font-medium mt-0.5">+£600 Add-on</span>
+                                        </div>
                                     </label>
-                                    <label class="flex items-center gap-3 cursor-pointer">
-                                        <input type="checkbox" id="seoOpt" checked class="w-4 h-4 rounded text-jsos-purple accent-jsos-purple bg-white/10 border-none">
-                                        <span class="text-sm text-jsos-grey hover:text-white">Local Search Setup & SEO Package (+£350)</span>
+                                    
+                                    <label class="flex items-center gap-4 p-4.5 bg-white/[0.02] hover:bg-white/[0.05] border border-white/10 hover:border-jsos-purpleLight/40 rounded-xl cursor-pointer transition-all duration-200 select-none">
+                                        <input type="checkbox" id="seoOpt" checked class="w-5 h-5 rounded text-jsos-purple accent-jsos-purpleLight cursor-pointer">
+                                        <div class="flex-1">
+                                            <span class="block text-sm font-bold text-white leading-tight">Local Search Setup & SEO Package</span>
+                                            <span class="block text-xs text-jsos-grey font-medium mt-0.5">+£350 Add-on</span>
+                                        </div>
                                     </label>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="bg-jsos-purple/10 border border-jsos-purple/30 rounded-2xl p-8 flex flex-col justify-between items-center text-center">
-                            <div>
-                                <span class="text-xs uppercase tracking-widest text-jsos-purple font-extrabold block mb-1">Estimated Investment</span>
-                                <span class="text-5xl font-black font-heading tracking-tight text-white block my-2" id="estimatedTotal">£1,450</span>
-                                <p class="text-xs text-jsos-grey mt-2">Includes managed cloud hosting setup and continuous speed optimization checks.</p>
+                        <!-- Result Area with Maximum Typographical Impact -->
+                        <div class="bg-jsos-purple/15 border border-jsos-purple/40 rounded-2xl p-8 md:p-10 flex flex-col justify-between items-center text-center">
+                            <div class="w-full space-y-4">
+                                <span class="text-xs uppercase tracking-widest text-jsos-purpleLight font-black block">Estimated Investment</span>
+                                <span class="text-5xl md:text-6xl font-black font-heading tracking-tight text-white block my-1 animate-pulse" id="estimatedTotal">£1,450</span>
+                                <p class="text-sm text-jsos-grey leading-relaxed max-w-[240px] mx-auto font-medium">Includes managed cloud hosting setup and speed optimizations.</p>
                             </div>
-                            <a href="#contact" class="w-full mt-6 py-3 bg-jsos-purple text-white font-bold rounded-xl hover:bg-purple-700 transition-colors text-center text-sm uppercase tracking-wider">
+                            <a href="#contact" class="w-full mt-8 py-4 bg-jsos-purple text-white font-extrabold rounded-xl hover:bg-purple-700 hover:shadow-[0_0_20px_rgba(102,51,153,0.5)] transition-all text-center text-sm uppercase tracking-wider">
                                 Claim This Estimate
                             </a>
                         </div>
@@ -203,116 +229,119 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
+        <!-- Portfolio Section with High-Contrast Text Overlays -->
         <section id="portfolio" class="py-32 relative bg-jsos-darkgrey/40 border-y border-white/5">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="watermark-container text-center mb-16">
                     <span class="watermark-text">PORTFOLIO</span>
-                    <h2 class="text-jsos-purple font-bold uppercase tracking-widest text-sm mb-4">OUR WORK</h2>
+                    <h2 class="text-jsos-purpleLight font-bold uppercase tracking-widest text-sm mb-4">OUR WORK</h2>
                     <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Built For Local Leaders</h3>
                 </div>
 
                 <div class="flex flex-wrap justify-center gap-4 mb-16">
-                    <button class="portfolio-filter-btn px-6 py-2 rounded-full font-bold text-sm tracking-wider uppercase border border-jsos-purple bg-jsos-purple text-white transition-all duration-300" data-filter="all">All Projects</button>
-                    <button class="portfolio-filter-btn px-6 py-2 rounded-full font-bold text-sm tracking-wider uppercase border border-white/10 text-jsos-grey hover:border-white hover:text-white transition-all duration-300" data-filter="custom">Business Websites</button>
-                    <button class="portfolio-filter-btn px-6 py-2 rounded-full font-bold text-sm tracking-wider uppercase border border-white/10 text-jsos-grey hover:border-white hover:text-white transition-all duration-300" data-filter="ecommerce">E-Commerce</button>
+                    <button class="portfolio-filter-btn px-6 py-2.5 rounded-full font-bold text-sm tracking-wider uppercase border border-jsos-purple bg-jsos-purple text-white transition-all duration-300" data-filter="all">All Projects</button>
+                    <button class="portfolio-filter-btn px-6 py-2.5 rounded-full font-bold text-sm tracking-wider uppercase border border-white/10 text-jsos-grey hover:border-white hover:text-white transition-all duration-300" data-filter="custom">Business Websites</button>
+                    <button class="portfolio-filter-btn px-6 py-2.5 rounded-full font-bold text-sm tracking-wider uppercase border border-white/10 text-jsos-grey hover:border-white hover:text-white transition-all duration-300" data-filter="ecommerce">E-Commerce</button>
                 </div>
 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolioContainer">
-                    <div class="portfolio-grid-item border border-white/5 relative group cursor-pointer h-[380px]" data-category="custom">
-                        <div class="w-full h-full bg-gradient-to-br from-purple-900 to-black absolute inset-0 opacity-40"></div>
+                    <div class="portfolio-grid-item border border-white/10 relative group cursor-pointer h-[380px]" data-category="custom">
+                        <div class="w-full h-full bg-gradient-to-br from-purple-950 to-black absolute inset-0 opacity-40"></div>
                         <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8">
                             <strong class="text-2xl text-white font-heading tracking-wide">Winters Recreation</strong>
-                            <p class="text-jsos-purple font-medium mt-1">High-Speed Business Showcase</p>
+                            <p class="text-jsos-purpleLight font-bold mt-1.5 uppercase text-xs tracking-wider">High-Speed Business Showcase</p>
                         </div>
                     </div>
-                    <div class="portfolio-grid-item border border-white/5 relative group cursor-pointer h-[380px]" data-category="ecommerce">
-                        <div class="w-full h-full bg-gradient-to-br from-indigo-900 to-black absolute inset-0 opacity-40"></div>
+                    <div class="portfolio-grid-item border border-white/10 relative group cursor-pointer h-[380px]" data-category="ecommerce">
+                        <div class="w-full h-full bg-gradient-to-br from-indigo-950 to-black absolute inset-0 opacity-40"></div>
                         <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8">
                             <strong class="text-2xl text-white font-heading tracking-wide">Coast to Coast Storage</strong>
-                            <p class="text-jsos-purple font-medium mt-1">Secure Booking & Payments Hub</p>
+                            <p class="text-jsos-purpleLight font-bold mt-1.5 uppercase text-xs tracking-wider">Secure Booking & Payments Hub</p>
                         </div>
                     </div>
-                    <div class="portfolio-grid-item border border-white/5 relative group cursor-pointer h-[380px]" data-category="custom">
-                        <div class="w-full h-full bg-gradient-to-br from-violet-900 to-black absolute inset-0 opacity-40"></div>
+                    <div class="portfolio-grid-item border border-white/10 relative group cursor-pointer h-[380px]" data-category="custom">
+                        <div class="w-full h-full bg-gradient-to-br from-violet-950 to-black absolute inset-0 opacity-40"></div>
                         <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8">
                             <strong class="text-2xl text-white font-heading tracking-wide">Mayfield Homes</strong>
-                            <p class="text-jsos-purple font-medium mt-1">Local Real Estate Platform</p>
+                            <p class="text-jsos-purpleLight font-bold mt-1.5 uppercase text-xs tracking-wider">Local Real Estate Platform</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Blueprint Section (Approach) -->
         <section id="approach" class="py-32 relative bg-jsos-black">
             <div class="max-w-5xl mx-auto px-6 text-center space-y-12">
                 <div class="watermark-container mb-12">
                     <span class="watermark-text">THE DIFFERENCE</span>
-                    <h2 class="text-jsos-purple font-bold uppercase tracking-widest text-sm mb-4">OUR BLUEPRINT</h2>
+                    <h2 class="text-jsos-purpleLight font-bold uppercase tracking-widest text-sm mb-4">OUR BLUEPRINT</h2>
                     <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Modern Code. Real Business Growth.</h3>
                 </div>
                 
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="glass-card p-8 rounded-2xl border border-white/5">
-                        <div class="text-3xl text-jsos-purple mb-4"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                        <h4 class="text-lg font-bold font-heading mb-2 text-white">Mobile-First Build</h4>
-                        <p class="text-xs text-jsos-grey">Over 60% of your local clients look you up from a phone. Your site will be flawlessly responsive and instantly actionable.</p>
+                <div class="grid md:grid-cols-3 gap-8 text-left">
+                    <div class="glass-card p-8 rounded-2xl border border-white/10">
+                        <div class="text-4xl text-jsos-purpleLight mb-5"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <h4 class="text-lg font-bold font-heading mb-3 text-white">Mobile-First Build</h4>
+                        <p class="text-sm text-jsos-grey leading-relaxed font-medium">Over 60% of your local clients look you up from a phone. Your site will be flawlessly responsive, fast-loading, and easily actionable on any handheld device.</p>
                     </div>
 
-                    <div class="glass-card p-8 rounded-2xl border border-white/5">
-                        <div class="text-3xl text-jsos-purple mb-4"><i class="fa-solid fa-magnifying-glass-arrow-right"></i></div>
-                        <h4 class="text-lg font-bold font-heading mb-2 text-white">Google Rank Ready</h4>
-                        <p class="text-xs text-jsos-grey">Google penalizes sluggish template setups. Our clean development strategies automatically support better local SEO placement.</p>
+                    <div class="glass-card p-8 rounded-2xl border border-white/10">
+                        <div class="text-4xl text-jsos-purpleLight mb-5"><i class="fa-solid fa-magnifying-glass-arrow-right"></i></div>
+                        <h4 class="text-lg font-bold font-heading mb-3 text-white">Google Rank Ready</h4>
+                        <p class="text-sm text-jsos-grey leading-relaxed font-medium">Google penalizes sluggish page layouts and slow template setups. Our clean development strategies automatically support better placement on regional searches.</p>
                     </div>
 
-                    <div class="glass-card p-8 rounded-2xl border border-white/5">
-                        <div class="text-3xl text-jsos-purple mb-4"><i class="fa-solid fa-heart-crack"></i></div>
-                        <h4 class="text-lg font-bold font-heading mb-2 text-white">Zero Maintenance Stress</h4>
-                        <p class="text-xs text-jsos-grey">No messy databases or broken plugins to check every weekend. Once it's launched, your site keeps working perfectly.</p>
+                    <div class="glass-card p-8 rounded-2xl border border-white/10">
+                        <div class="text-4xl text-jsos-purpleLight mb-5"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h4 class="text-lg font-bold font-heading mb-3 text-white">Zero Maintenance Stress</h4>
+                        <p class="text-sm text-jsos-grey leading-relaxed font-medium">No messy databases, core update crashes, or broken security plugins to fix every weekend. Once it's launched, your website keeps running and selling flawlessly.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Redesigned High-Legibility Form Section -->
         <section id="contact" class="py-32 relative bg-jsos-darkgrey/40 border-t border-white/5">
             <div class="max-w-4xl mx-auto px-6">
                 <div class="watermark-container text-center mb-16">
                     <span class="watermark-text">DISCUSS</span>
-                    <h2 class="text-jsos-purple font-bold uppercase tracking-widest text-sm mb-4">GET IN TOUCH</h2>
+                    <h2 class="text-jsos-purpleLight font-bold uppercase tracking-widest text-sm mb-4">GET IN TOUCH</h2>
                     <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Start Your Custom Build</h3>
                 </div>
 
-                <div class="glass-card p-8 md:p-12 rounded-3xl border border-white/10 relative overflow-hidden">
+                <div class="glass-card p-8 md:p-12 rounded-3xl border border-white/15 relative overflow-hidden">
                     <div id="contactFormWrapper">
                         <form id="jsosContactForm" class="space-y-6">
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
-                                    <label class="block text-xs font-bold uppercase tracking-wider text-jsos-grey mb-2">Your Name</label>
-                                    <input type="text" name="name" required class="w-full bg-jsos-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-jsos-purple transition-colors text-sm">
+                                    <label class="block text-sm font-semibold tracking-wide text-white/95 mb-2">Your Name</label>
+                                    <input type="text" name="name" required class="w-full bg-jsos-black/80 border border-white/20 rounded-xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-bold uppercase tracking-wider text-jsos-grey mb-2">Email Address</label>
-                                    <input type="email" name="email" required class="w-full bg-jsos-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-jsos-purple transition-colors text-sm">
+                                    <label class="block text-sm font-semibold tracking-wide text-white/95 mb-2">Email Address</label>
+                                    <input type="email" name="email" required class="w-full bg-jsos-black/80 border border-white/20 rounded-xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium">
                                 </div>
                             </div>
 
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
-                                    <label class="block text-xs font-bold uppercase tracking-wider text-jsos-grey mb-2">Phone Number</label>
-                                    <input type="tel" name="phone" class="w-full bg-jsos-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-jsos-purple transition-colors text-sm">
+                                    <label class="block text-sm font-semibold tracking-wide text-white/95 mb-2">Phone Number</label>
+                                    <input type="tel" name="phone" class="w-full bg-jsos-black/80 border border-white/20 rounded-xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-bold uppercase tracking-wider text-jsos-grey mb-2">Estimated Timeline</label>
-                                    <select name="timeline" class="w-full bg-jsos-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-jsos-purple transition-colors text-sm">
+                                    <label class="block text-sm font-semibold tracking-wide text-white/95 mb-2">Estimated Timeline</label>
+                                    <select name="timeline" class="w-full bg-jsos-black/80 border border-white/20 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium">
                                         <option value="Urgent">Immediate Launch (&lt; 2 Weeks)</option>
-                                        <option value="Standard" selected>Standard Lifecyle (3-4 Weeks)</option>
+                                        <option value="Standard" selected>Standard Lifecycle (3-4 Weeks)</option>
                                         <option value="Flexible">Planning Stage / Ongoing Support</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-jsos-grey mb-2">Tell Us About Your Business</label>
-                                <textarea name="message" rows="5" required placeholder="Describe your target audience or any baseline issues your current site might be facing..." class="w-full bg-jsos-black/50 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-white/20 focus:outline-none focus:border-jsos-purple transition-colors text-sm"></textarea>
+                                <label class="block text-sm font-semibold tracking-wide text-white/95 mb-2">Tell Us About Your Business</label>
+                                <textarea name="message" rows="5" required placeholder="Describe your target audience or any baseline issues your current website might be facing..." class="w-full bg-jsos-black/80 border border-white/20 rounded-xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium"></textarea>
                             </div>
 
                             <div class="pt-4">
@@ -328,46 +357,54 @@ import Layout from '../layouts/Layout.astro';
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
                         <h4 class="text-3xl font-extrabold font-heading text-white">Inquiry Received!</h4>
-                        <p class="text-jsos-grey max-w-md mx-auto">We'll review your details and map out a growth blueprint for your company. Expect an email proposal shortly.</p>
-                        <button id="resetFormBtn" class="px-6 py-2.5 bg-white/5 border border-white/10 text-white rounded-lg hover:bg-white/10 transition-all text-xs uppercase tracking-widest font-bold">Submit Another Inquiry</button>
+                        <p class="text-jsos-grey max-w-md mx-auto leading-relaxed text-base font-medium">We'll review your details and map out a growth blueprint for your company. Expect an email proposal shortly.</p>
+                        <button id="resetFormBtn" class="px-6 py-3 bg-white/5 border border-white/10 text-white rounded-lg hover:bg-white/10 transition-all text-xs uppercase tracking-widest font-bold">Submit Another Inquiry</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="relative z-10 border-t border-white/5 pt-24 pb-12 bg-[#060408]">
+    <!-- Footer with Improved Contrast & Typography -->
+    <footer class="relative z-10 border-t border-white/10 pt-24 pb-12 bg-[#060408]">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-16">
             <div class="space-y-6">
                 <div class="flex items-center gap-3">
                     <div class="w-8 h-8 bg-jsos-purple rounded-lg flex items-center justify-center text-white font-extrabold text-sm">JS</div>
-                    <span class="text-xl font-bold tracking-tight text-white font-heading">JS<span class="text-jsos-purple">OS</span></span>
+                    <span class="text-xl font-bold tracking-tight text-white font-heading">JS<span class="text-jsos-purpleLight">OS</span></span>
                 </div>
-                <p class="text-sm text-jsos-grey">Custom website design and management for small businesses looking to outshine competitors locally.</p>
+                <p class="text-sm text-jsos-grey leading-relaxed font-medium">Custom website design and management for small businesses looking to outshine competitors locally.</p>
             </div>
             <div>
                 <h4 class="text-white font-bold font-heading uppercase text-xs tracking-wider mb-6">Explore</h4>
-                <ul class="space-y-3.5 text-sm text-jsos-grey">
-                    <li><a href="#services" class="hover:text-white">Services</a></li>
-                    <li><a href="#estimator" class="hover:text-white">Estimator Tool</a></li>
+                <ul class="space-y-4 text-sm text-jsos-grey font-semibold">
+                    <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                    <li><a href="#estimator" class="hover:text-white transition-colors">Estimator Tool</a></li>
+                    <li><a href="#portfolio" class="hover:text-white transition-colors">Our Portfolio</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-white font-bold font-heading uppercase text-xs tracking-wider mb-6">Our Focus</h4>
-                <ul class="space-y-3.5 text-sm text-jsos-grey">
+                <ul class="space-y-4 text-sm text-jsos-grey font-medium">
                     <li><span class="text-jsos-grey">Speed Architecture</span></li>
                     <li><span class="text-jsos-grey">Local SEO Dominance</span></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-white font-bold font-heading uppercase text-xs tracking-wider mb-6">Office Desk</h4>
-                <ul class="space-y-3.5 text-sm text-jsos-grey text-xs">
-                    <li class="flex items-center gap-3"><i class="fa-regular fa-envelope text-jsos-purple"></i><a href="mailto:info@jsos.uk">info@jsos.uk</a></li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-jsos-purple"></i><span>Romford, Essex, UK</span></li>
+                <ul class="space-y-4 text-sm text-jsos-grey font-medium">
+                    <li class="flex items-center gap-3">
+                        <i class="fa-regular fa-envelope text-jsos-purpleLight"></i>
+                        <a href="mailto:info@jsos.uk" class="hover:text-white transition-colors">info@jsos.uk</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-location-dot text-jsos-purpleLight"></i>
+                        <span>Romford, Essex, UK</span>
+                    </li>
                 </ul>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-6 border-t border-white/5 pt-8 flex justify-between items-center text-xs text-jsos-grey">
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/5 pt-8 flex justify-between items-center text-sm text-jsos-grey font-medium">
             <p>&copy; <span id="year"></span> JS Office Solutions. All Rights Reserved.</p>
         </div>
     </footer>
@@ -380,6 +417,14 @@ import Layout from '../layouts/Layout.astro';
         const mobileMenu = document.getElementById('mobileMenu');
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when links are clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
         });
 
         // Typing Loop
