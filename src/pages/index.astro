@@ -79,11 +79,11 @@ import Layout from '../layouts/Layout.astro';
                     
                     <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] font-heading text-white flex flex-col justify-start">
                         <span>Websites built to</span>
-                        <span class="min-h-[1.2em] block text-transparent bg-clip-text bg-gradient-to-r from-jsos-purpleLight via-purple-400 to-white font-black" id="typingText">&nbsp;</span>
+                        <span class="min-h-[1.2em] block font-black" id="typingText">&nbsp;</span>
                     </h1>
                     
                     <p class="text-lg md:text-xl text-jsos-grey max-w-2xl leading-relaxed font-medium">
-                        We engineering ultra-fast, bespoke websites that capture regional search engine traffic and transform clicks into premium long-term clients.
+                        We engineer ultra-fast, bespoke websites that capture regional search engine traffic and transform clicks into premium long-term clients.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-5 pt-4">
@@ -134,7 +134,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <section id="services" class="py-40 relative bg-jsos-black border-y border-white/5 overflow-hidden z-20 xl:px-12">
+        <section id="services" class="py-40 relative bg-[#0C0910] border-y border-white/5 overflow-hidden z-20 xl:px-12">
             <div class="absolute inset-0 pointer-events-none">
                 <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-jsos-purple/5 rounded-full blur-[140px]"></div>
             </div>
@@ -147,7 +147,7 @@ import Layout from '../layouts/Layout.astro';
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-10 lg:gap-12">
-                    <div class="glow-card p-[1px] rounded-2xl overflow-hidden reveal-element">
+                    <div class="glow-card tilt-card p-[1px] rounded-2xl overflow-hidden reveal-element">
                         <div class="bg-jsos-darkgrey p-10 lg:p-12 rounded-2xl border border-white/5 relative overflow-hidden h-full w-full">
                             <div class="w-14 h-14 bg-jsos-purple/20 border border-jsos-purple/30 rounded-xl flex items-center justify-center mb-8 shadow-[0_0_15px_rgba(102,51,153,0.2)]">
                                 <i class="fa-solid fa-bolt text-xl text-jsos-purpleLight"></i>
@@ -159,7 +159,7 @@ import Layout from '../layouts/Layout.astro';
                         </div>
                     </div>
 
-                    <div class="glow-card p-[1px] rounded-2xl overflow-hidden reveal-element">
+                    <div class="glow-card tilt-card p-[1px] rounded-2xl overflow-hidden reveal-element">
                         <div class="bg-jsos-darkgrey p-10 lg:p-12 rounded-2xl border border-white/5 relative overflow-hidden h-full w-full">
                             <div class="w-14 h-14 bg-jsos-purple/20 border border-jsos-purple/30 rounded-xl flex items-center justify-center mb-8 shadow-[0_0_15px_rgba(102,51,153,0.2)]">
                                 <i class="fa-solid fa-basket-shopping text-xl text-jsos-purpleLight"></i>
@@ -171,7 +171,7 @@ import Layout from '../layouts/Layout.astro';
                         </div>
                     </div>
 
-                    <div class="glow-card p-[1px] rounded-2xl overflow-hidden reveal-element">
+                    <div class="glow-card tilt-card p-[1px] rounded-2xl overflow-hidden reveal-element">
                         <div class="bg-jsos-darkgrey p-10 lg:p-12 rounded-2xl border border-white/5 relative overflow-hidden h-full w-full">
                             <div class="w-14 h-14 bg-jsos-purple/20 border border-jsos-purple/30 rounded-xl flex items-center justify-center mb-8 shadow-[0_0_15px_rgba(102,51,153,0.2)]">
                                 <i class="fa-solid fa-shield-halved text-xl text-jsos-purpleLight"></i>
@@ -214,13 +214,15 @@ import Layout from '../layouts/Layout.astro';
                 </div>
                 
                 <div class="lg:col-span-6 flex flex-col items-center justify-center relative min-h-[420px] reveal-element">
-                    <canvas id="cube3dCanvas" class="w-full max-w-[440px] aspect-square cursor-grab active:cursor-grabbing z-10" aria-label="Interactive 3D structural model wireframe grid"></canvas>
+                    <div id="cubeContainer" class="w-full max-w-[440px] aspect-square flex items-center justify-center relative transition-transform duration-300 ease-out">
+                        <canvas id="cube3dCanvas" class="w-full h-full cursor-grab active:cursor-grabbing z-10" aria-label="Interactive 3D structural model wireframe grid"></canvas>
+                    </div>
                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(102,51,153,0.15)_0%,transparent_65%)] pointer-events-none z-0"></div>
                 </div>
             </div>
         </section>
 
-        <section id="process" class="py-40 relative bg-jsos-black border-t border-white/5 z-20 xl:px-12">
+        <section id="process" class="py-40 relative bg-[#0C0910] border-t border-white/5 z-20 xl:px-12">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="watermark-container text-center mb-28 reveal-element">
                     <span class="watermark-text">SIMPLE</span>
@@ -229,7 +231,7 @@ import Layout from '../layouts/Layout.astro';
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-12 lg:gap-14 relative z-10 pt-6">
-                    <div class="glow-card p-[1px] rounded-2xl overflow-visible reveal-element">
+                    <div class="glow-card tilt-card p-[1px] rounded-2xl overflow-visible reveal-element">
                         <div class="bg-jsos-darkgrey p-8 lg:p-10 rounded-2xl border border-white/5 relative h-full w-full overflow-visible">
                             <div class="absolute -top-7 left-8 bg-jsos-purple text-white w-14 h-14 rounded-2xl flex items-center justify-center font-black border border-jsos-purpleLight/30 text-xl shadow-[0_0_25px_rgba(102,51,153,0.6)] z-30">
                                 1
@@ -241,7 +243,7 @@ import Layout from '../layouts/Layout.astro';
                         </div>
                     </div>
 
-                    <div class="glow-card p-[1px] rounded-2xl overflow-visible reveal-element">
+                    <div class="glow-card tilt-card p-[1px] rounded-2xl overflow-visible reveal-element">
                         <div class="bg-jsos-darkgrey p-8 lg:p-10 rounded-2xl border border-white/5 relative h-full w-full overflow-visible">
                             <div class="absolute -top-7 left-8 bg-jsos-purple text-white w-14 h-14 rounded-2xl flex items-center justify-center font-black border border-jsos-purpleLight/30 text-xl shadow-[0_0_25px_rgba(102,51,153,0.6)] z-30">
                                 2
@@ -253,7 +255,7 @@ import Layout from '../layouts/Layout.astro';
                         </div>
                     </div>
 
-                    <div class="glow-card p-[1px] rounded-2xl overflow-visible reveal-element">
+                    <div class="glow-card tilt-card p-[1px] rounded-2xl overflow-visible reveal-element">
                         <div class="bg-jsos-darkgrey p-8 lg:p-10 rounded-2xl border border-white/5 relative h-full w-full overflow-visible">
                             <div class="absolute -top-7 left-8 bg-jsos-purple text-white w-14 h-14 rounded-2xl flex items-center justify-center font-black border border-jsos-purpleLight/30 text-xl shadow-[0_0_25px_rgba(102,51,153,0.6)] z-30">
                                 3
@@ -539,6 +541,17 @@ import Layout from '../layouts/Layout.astro';
         .glow-card:hover::before {
             opacity: 1;
         }
+
+        /* 3D Dynamic Card Rotation Styles */
+        .tilt-card {
+            transform-style: preserve-3d;
+            transition: transform 0.1s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+            will-change: transform;
+        }
+
+        .tilt-card-reset {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease, border-color 0.5s ease !important;
+        }
     </style>
 
     <script is:inline>
@@ -608,7 +621,7 @@ import Layout from '../layouts/Layout.astro';
             });
         }
 
-        // Fixed Typography Loop Layout Engine
+        // Fixed Typography Loop Layout Engine - Invisible Text Fix
         const phraseArray = ["Attract Customers.", "Load Instantly.", "Dominate Local Search."];
         let count = 0, index = 0, currentText = "", letter = "";
         
@@ -619,7 +632,7 @@ import Layout from '../layouts/Layout.astro';
             
             const target = document.getElementById('typingText');
             if (target) {
-                target.innerHTML = letter + '<span class="animate-pulse font-light text-jsos-purpleLight">|</span>';
+                target.innerHTML = `<span class="text-transparent bg-clip-text bg-gradient-to-r from-jsos-purpleLight via-purple-400 to-white">${letter}</span><span class="animate-pulse font-light text-jsos-purpleLight">|</span>`;
             }
             
             if (letter.length === currentText.length) {
@@ -716,6 +729,50 @@ import Layout from '../layouts/Layout.astro';
             });
         });
 
+        // 3D Card Face-To-Cursor Rotation Engine
+        const tiltCards = document.querySelectorAll('.tilt-card');
+        tiltCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                card.classList.remove('tilt-card-reset');
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const cardWidth = rect.width;
+                const cardHeight = rect.height;
+                
+                // Calculate directional percentage (-0.5 to 0.5 range)
+                const normX = (x / cardWidth) - 0.5;
+                const normY = (y / cardHeight) - 0.5;
+                
+                const maxRotation = 9; // Max structural tilt in degrees
+                const rotX = -normY * maxRotation;
+                const rotY = normX * maxRotation;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.025, 1.025, 1.025)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.classList.add('tilt-card-reset');
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+            });
+        });
+
+        // Detached Scrolling Parallax Engine For 3D Cube Container
+        const cubeContainer = document.getElementById('cubeContainer');
+        window.addEventListener('scroll', () => {
+            if (cubeContainer) {
+                const rect = cubeContainer.getBoundingClientRect();
+                const winHeight = window.innerHeight;
+                if (rect.top < winHeight && rect.bottom > 0) {
+                    const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - winHeight);
+                    // Decoupled offset calculations relative to browser height bounds
+                    const yOffset = (scrollPercent * 100) - 50; 
+                    cubeContainer.style.transform = `translateY(${yOffset}px)`;
+                }
+            }
+        });
+
         // High-Visibility Bold Vector Particle Background Canvas Matrix
         const canvas = document.getElementById('polygonCanvas');
         const ctx = canvas.getContext('2d');
@@ -790,7 +847,7 @@ import Layout from '../layouts/Layout.astro';
         initCanvas();
         drawPoints();
 
-        // High-Performance Interactive 3D Canvas Projection Matrix Engine
+        // High-Performance Interactive 3D Canvas Projection Matrix Engine (With Gravitational Physics Pull)
         const cubeCanvas = document.getElementById('cube3dCanvas');
         if (cubeCanvas) {
             const c3d = cubeCanvas.getContext('2d');
@@ -815,6 +872,8 @@ import Layout from '../layouts/Layout.astro';
             let angleY = 0.6;
             let targetAngleX = 0.45;
             let targetAngleY = 0.6;
+            let gravityX = 0;
+            let gravityY = 0;
             let isDragging = false;
             let previousMousePosition = { x: 0, y: 0 };
 
@@ -826,11 +885,6 @@ import Layout from '../layouts/Layout.astro';
 
             window.addEventListener('mousemove', (e) => {
                 if (!isDragging) {
-                    // Subtle dynamic kinetic tracking when hovering idling across parent sections
-                    const rect = cubeCanvas.getBoundingClientRect();
-                    if(e.clientX >= rect.left && e.clientX <= rect.right && e.clientY >= rect.top && e.clientY <= rect.bottom) {
-                        targetAngleY += 0.005;
-                    }
                     return;
                 }
                 const deltaX = e.clientX - previousMousePosition.x;
@@ -864,17 +918,40 @@ import Layout from '../layouts/Layout.astro';
             function renderCubeFrameGrid() {
                 c3d.clearRect(0, 0, width3d, height3d);
                 
-                // Low-pass easing interpolator parameters for smooth vector rotation transitions
-                angleX += (targetAngleX - angleX) * 0.08;
-                angleY += (targetAngleY - angleY) * 0.08;
+                // Cursor gravitation pull equations inside threshold parameters
+                let targetPullX = 0;
+                let targetPullY = 0;
                 
-                // Auto rotate idling structure when no user grab inputs are active
+                if (mousePos.x !== null && mousePos.y !== null) {
+                    const cubeRect = cubeCanvas.getBoundingClientRect();
+                    const cubeCenterX = cubeRect.left + cubeRect.width / 2;
+                    const cubeCenterY = cubeRect.top + cubeRect.height / 2;
+                    const distanceToCursor = Math.hypot(mousePos.x - cubeCenterX, mousePos.y - cubeCenterY);
+                    
+                    const activeRange = 400; // Attraction bounding box threshold
+                    if (distanceToCursor < activeRange) {
+                        const attractionStrength = (1 - distanceToCursor / activeRange) * 0.45;
+                        targetPullY = ((mousePos.x - cubeCenterX) / cubeRect.width) * attractionStrength;
+                        targetPullX = -((mousePos.y - cubeCenterY) / cubeRect.height) * attractionStrength;
+                    }
+                }
+                
+                // Smooth interpolation (lerp) on gravitational vectors
+                gravityX += (targetPullX - gravityX) * 0.1;
+                gravityY += (targetPullY - gravityY) * 0.1;
+                
+                // Apply rotation angles combined with current gravity pulling state
+                angleX += (targetAngleX + gravityX - angleX) * 0.08;
+                angleY += (targetAngleY + gravityY - angleY) * 0.08;
+                
+                // Auto rotate idling structure when no user inputs are active
                 if (!isDragging) {
                     targetAngleY += 0.003;
                     targetAngleX = Math.sin(Date.now() * 0.0005) * 0.35;
                 }
 
-                let projectedPoints = vertices.map(v => project(v[0] * 1.1, v[1] * 1.1, v[2] * 1.1));
+                // Downscaled spatial coordinates modifier from 1.1 to 0.72 to resolve the cutoff issue
+                let projectedPoints = vertices.map(v => project(v[0] * 0.72, v[1] * 0.72, v[2] * 0.72));
                 
                 // Draw connecting edge structural frames with a crisp glowing look
                 c3d.lineWidth = 2.0;
@@ -896,7 +973,7 @@ import Layout from '../layouts/Layout.astro';
                     c3d.stroke();
                 });
                 
-                // Render sharp tracking data nodes on all vertice cross points
+                // Render sharp tracking data nodes on all vertices cross points
                 c3d.shadowBlur = 0; 
                 projectedPoints.forEach(p => {
                     const nodeOpacity = Math.min(Math.max(0.3, 1.0 - p.depth * 0.4), 1.0);
