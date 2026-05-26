@@ -3,10 +3,24 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="JS Office Solutions | High-Performance Websites for Small Businesses">
-    <!-- Background Canvas with reduced opacity so text remains beautifully readable -->
     <div class="fixed inset-0 z-0 pointer-events-none">
         <canvas id="polygonCanvas" class="w-full h-full opacity-20"></canvas>
     </div>
+
+    <a 
+        href="https://wa.me/447000000000" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-jsos-purple text-white shadow-[0_4px_20px_rgba(102,51,153,0.5)] hover:bg-purple-700 hover:scale-110 transition-all duration-300 group"
+        aria-label="Chat with us on WhatsApp"
+    >
+        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.66.986 3.288 1.481 4.717 1.482 5.433-.002 9.85-4.425 9.853-9.86.002-2.634-1.02-5.11-2.881-6.974-1.86-1.864-4.332-2.887-6.969-2.889-5.437 0-9.854 4.423-9.857 9.86-.001 1.96.514 3.791 1.572 5.324l-.973 3.548 3.638-.953zM16.945 13.9c-.3-.15-1.775-.875-2.046-.975-.27-.1-.466-.15-.66.15-.194.3-.75.95-.92 1.14-.17.19-.34.215-.64.065-1.288-.644-2.13-1.127-2.966-2.564-.22-.378.22-.35.63-1.176.07-.15.035-.28-.015-.38-.05-.1-.466-1.125-.64-1.54-.17-.41-.357-.355-.488-.362-.127-.008-.273-.01-.42-.01-.147 0-.385.055-.587.275-.2.22-.765.75-.765 1.83 0 1.08.785 2.12.895 2.27.11.15 1.543 2.354 3.74 3.302 1.147.496 1.7.593 2.306.503.662-.1 1.775-.725 2.025-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/>
+        </svg>
+        <span class="absolute right-16 bg-jsos-darkgrey border border-white/10 text-white text-xs font-bold px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap shadow-xl pointer-events-none">
+            Have a question? Chat now
+        </span>
+    </a>
 
     <nav class="fixed w-full z-50 bg-jsos-black/90 backdrop-blur-xl border-b border-white/10 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
@@ -21,9 +35,9 @@ import Layout from '../layouts/Layout.astro';
             
             <div class="hidden md:flex space-x-8 text-sm font-bold tracking-wider uppercase text-jsos-grey">
                 <a href="#services" class="hover:text-white transition-colors py-2">What We Do</a>
+                <a href="#process" class="hover:text-white transition-colors py-2">How It Works</a>
                 <a href="#estimator" class="hover:text-white transition-colors py-2">Price Calculator</a>
                 <a href="#portfolio" class="hover:text-white transition-colors py-2">Our Work</a>
-                <a href="#approach" class="hover:text-white transition-colors py-2">Why It Matters</a>
             </div>
             
             <a href="#contact" class="hidden md:inline-flex items-center justify-center px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all bg-jsos-purple rounded-xl hover:bg-purple-700 hover:shadow-[0_0_25px_rgba(102,51,153,0.5)] transform hover:-translate-y-0.5 duration-300">
@@ -38,16 +52,15 @@ import Layout from '../layouts/Layout.astro';
         <div class="hidden" id="mobileMenu">
             <div class="px-6 pt-2 pb-8 bg-jsos-black border-b border-white/10 flex flex-col space-y-4 text-center shadow-2xl">
                 <a href="#services" class="text-lg font-bold text-white py-2.5 hover:text-jsos-purpleLight">What We Do</a>
+                <a href="#process" class="text-lg font-bold text-white py-2.5 hover:text-jsos-purpleLight">How It Works</a>
                 <a href="#estimator" class="text-lg font-bold text-white py-2.5 hover:text-jsos-purpleLight">Price Calculator</a>
                 <a href="#portfolio" class="text-lg font-bold text-white py-2.5 hover:text-jsos-purpleLight">Our Work</a>
-                <a href="#approach" class="text-lg font-bold text-white py-2.5 hover:text-jsos-purpleLight">Why It Matters</a>
                 <a href="#contact" class="bg-jsos-purple text-white py-3.5 rounded-xl font-bold uppercase tracking-wider hover:bg-purple-700 transition-colors">LET'S TALK</a>
             </div>
         </div>
     </nav>
 
     <main class="relative z-10">
-        <!-- Hero Section -->
         <section class="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden">
             <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-jsos-purple/15 rounded-full blur-[160px] pointer-events-none"></div>
 
@@ -67,18 +80,20 @@ import Layout from '../layouts/Layout.astro';
                         We build ultra-fast, custom websites that turn local search traffic into paying clients. Say goodbye to slow templates that frustrate your visitors.
                     </p>
                     
-                    <div class="flex flex-col sm:flex-row gap-5 pt-4">
+                    <div class="flex flex-col sm:flex-row gap-5 pt-2">
                         <a href="#contact" class="px-8 py-4.5 bg-jsos-purple text-white font-extrabold rounded-xl hover:bg-purple-700 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(102,51,153,0.8)] transition-all duration-300 text-center flex items-center justify-center gap-3 tracking-wider uppercase text-sm">
                             Get A Free Proposal
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="#portfolio" class="px-8 py-4.5 glass-card text-white font-extrabold rounded-xl hover:bg-white/10 transition-all duration-300 text-center text-sm uppercase tracking-wider">
-                            See Our Work
+                        <a href="#estimator" class="px-8 py-4.5 glass-card text-white font-extrabold rounded-xl hover:bg-white/10 transition-all duration-300 text-center text-sm uppercase tracking-wider">
+                            Calculate Your Price
                         </a>
                     </div>
+                    <p class="text-xs text-jsos-darkGreyText font-medium italic pl-1">
+                        * No upfront hidden costs. Custom code built right here in Essex.
+                    </p>
                 </div>
 
-                <!-- Floating Code Window - Highly legible typography -->
                 <div class="lg:col-span-5 relative hidden lg:block animate-float">
                     <div class="relative w-full aspect-square max-w-[480px] mx-auto">
                         <div class="absolute inset-2 glass-card rounded-3xl p-8 flex flex-col gap-5 shadow-2xl overflow-hidden z-20">
@@ -110,7 +125,6 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- Services Section -->
         <section id="services" class="py-32 relative bg-jsos-darkgrey/40">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="watermark-container text-center mb-24">
@@ -153,8 +167,49 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- Pricing Estimator Section -->
-        <section id="estimator" class="py-32 relative bg-jsos-black">
+        <section id="process" class="py-32 relative bg-jsos-black border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="watermark-container text-center mb-20">
+                    <span class="watermark-text">SIMPLE</span>
+                    <h2 class="text-jsos-purpleLight font-bold uppercase tracking-widest text-sm mb-4">OUR ROADMAP</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Getting Started is Simple</h3>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 relative">
+                    <div class="glass-card p-8 rounded-2xl border border-white/10 relative">
+                        <div class="absolute -top-5 left-8 bg-jsos-purple text-white w-10 h-10 rounded-xl flex items-center justify-center font-black border border-jsos-purpleLight/30 text-lg">
+                            1
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3 mt-2 font-heading">Run an Estimate</h4>
+                        <p class="text-sm text-jsos-grey leading-relaxed">
+                            Use the transparent blueprint estimator below to custom configure your page requirements and scale options in real time.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl border border-white/10 relative">
+                        <div class="absolute -top-5 left-8 bg-jsos-purple text-white w-10 h-10 rounded-xl flex items-center justify-center font-black border border-jsos-purpleLight/30 text-lg">
+                            2
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3 mt-2 font-heading">Claim with 1-Click</h4>
+                        <p class="text-sm text-jsos-grey leading-relaxed">
+                            Submit your dashboard calculation or drop a text over WhatsApp. We'll set up a short, no-nonsense review session.
+                        </p>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl border border-white/10 relative">
+                        <div class="absolute -top-5 left-8 bg-jsos-purple text-white w-10 h-10 rounded-xl flex items-center justify-center font-black border border-jsos-purpleLight/30 text-lg">
+                            3
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3 mt-2 font-heading">Hands-Off Launch</h4>
+                        <p class="text-sm text-jsos-grey leading-relaxed">
+                            We write clean code, map out local SEO parameters, and secure the server landscape. You focus completely on running your business.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="estimator" class="py-32 relative bg-jsos-darkgrey/20 border-t border-white/5">
             <div class="max-w-4xl mx-auto px-6">
                 <div class="watermark-container text-center mb-16">
                     <span class="watermark-text">PRICING</span>
@@ -171,7 +226,6 @@ import Layout from '../layouts/Layout.astro';
                                 <label class="block text-sm font-bold uppercase tracking-wider text-white mb-3" id="pageLabel">
                                     Number of Core Pages: <span class="text-jsos-purpleLight text-lg font-black" id="pageValue">5</span>
                                 </label>
-                                <!-- Enhanced Custom Slider Input -->
                                 <div class="relative flex items-center py-2">
                                     <input type="range" min="1" max="25" value="5" class="w-full h-2.5 bg-white/10 rounded-lg appearance-none cursor-pointer accent-jsos-purpleLight focus:outline-none focus:ring-2 focus:ring-jsos-purpleLight/50" id="pageRange">
                                 </div>
@@ -182,7 +236,6 @@ import Layout from '../layouts/Layout.astro';
                                 </div>
                             </div>
 
-                            <!-- Redesigned Option Add-ons to be large, accessible, tap-friendly buttons -->
                             <div class="space-y-4">
                                 <span class="block text-sm font-bold uppercase tracking-wider text-white mb-1">Optional Add-ons</span>
                                 <div class="space-y-3.5">
@@ -213,15 +266,14 @@ import Layout from '../layouts/Layout.astro';
                             </div>
                         </div>
 
-                        <!-- Result Area with Maximum Typographical Impact -->
                         <div class="bg-jsos-purple/15 border border-jsos-purple/40 rounded-2xl p-8 md:p-10 flex flex-col justify-between items-center text-center">
                             <div class="w-full space-y-4">
                                 <span class="text-xs uppercase tracking-widest text-jsos-purpleLight font-black block">Estimated Investment</span>
                                 <span class="text-5xl md:text-6xl font-black font-heading tracking-tight text-white block my-1 animate-pulse" id="estimatedTotal">£1,450</span>
                                 <p class="text-sm text-jsos-grey leading-relaxed max-w-[240px] mx-auto font-medium">Includes managed cloud hosting setup and speed optimizations.</p>
                             </div>
-                            <a href="#contact" class="w-full mt-8 py-4 bg-jsos-purple text-white font-extrabold rounded-xl hover:bg-purple-700 hover:shadow-[0_0_20px_rgba(102,51,153,0.5)] transition-all text-center text-sm uppercase tracking-wider">
-                                Claim This Estimate
+                            <a href="#contact" id="claimEstimateBtn" class="w-full mt-8 py-4 bg-jsos-purple text-white font-extrabold rounded-xl hover:bg-purple-700 hover:shadow-[0_0_20px_rgba(102,51,153,0.5)] transition-all text-center text-sm uppercase tracking-wider">
+                                Lock In This Estimate
                             </a>
                         </div>
                     </div>
@@ -229,8 +281,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- Portfolio Section with High-Contrast Text Overlays -->
-        <section id="portfolio" class="py-32 relative bg-jsos-darkgrey/40 border-y border-white/5">
+        <section id="portfolio" class="py-32 relative bg-jsos-black border-y border-white/5">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="watermark-container text-center mb-16">
                     <span class="watermark-text">PORTFOLIO</span>
@@ -270,13 +321,12 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- Blueprint Section (Approach) -->
         <section id="approach" class="py-32 relative bg-jsos-black">
             <div class="max-w-5xl mx-auto px-6 text-center space-y-12">
                 <div class="watermark-container mb-12">
                     <span class="watermark-text">THE DIFFERENCE</span>
                     <h2 class="text-jsos-purpleLight font-bold uppercase tracking-widest text-sm mb-4">OUR BLUEPRINT</h2>
-                    <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Modern Code. Real Business Growth.</h3>
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Modern Code.<br/>Real Business Growth.</h3>
                 </div>
                 
                 <div class="grid md:grid-cols-3 gap-8 text-left">
@@ -301,7 +351,6 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <!-- Redesigned High-Legibility Form Section -->
         <section id="contact" class="py-32 relative bg-jsos-darkgrey/40 border-t border-white/5">
             <div class="max-w-4xl mx-auto px-6">
                 <div class="watermark-container text-center mb-16">
@@ -316,7 +365,7 @@ import Layout from '../layouts/Layout.astro';
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-sm font-semibold tracking-wide text-white/95 mb-2">Your Name</label>
-                                    <input type="text" name="name" required class="w-full bg-jsos-black/80 border border-white/20 rounded-xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium">
+                                    <input type="text" name="name" id="formName" required class="w-full bg-jsos-black/80 border border-white/20 rounded-xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium">
                                 </div>
                                 <div>
                                     <label class="block text-sm font-semibold tracking-wide text-white/95 mb-2">Email Address</label>
@@ -341,7 +390,7 @@ import Layout from '../layouts/Layout.astro';
 
                             <div>
                                 <label class="block text-sm font-semibold tracking-wide text-white/95 mb-2">Tell Us About Your Business</label>
-                                <textarea name="message" rows="5" required placeholder="Describe your target audience or any baseline issues your current website might be facing..." class="w-full bg-jsos-black/80 border border-white/20 rounded-xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium"></textarea>
+                                <textarea name="message" id="formMessage" rows="5" required placeholder="Describe your target audience or any baseline issues your current website might be facing..." class="w-full bg-jsos-black/80 border border-white/20 rounded-xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium"></textarea>
                             </div>
 
                             <div class="pt-4">
@@ -365,7 +414,6 @@ import Layout from '../layouts/Layout.astro';
         </section>
     </main>
 
-    <!-- Footer with Improved Contrast & Typography -->
     <footer class="relative z-10 border-t border-white/10 pt-24 pb-12 bg-[#060408]">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-16">
             <div class="space-y-6">
@@ -379,6 +427,7 @@ import Layout from '../layouts/Layout.astro';
                 <h4 class="text-white font-bold font-heading uppercase text-xs tracking-wider mb-6">Explore</h4>
                 <ul class="space-y-4 text-sm text-jsos-grey font-semibold">
                     <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                    <li><a href="#process" class="hover:text-white transition-colors">How It Works</a></li>
                     <li><a href="#estimator" class="hover:text-white transition-colors">Estimator Tool</a></li>
                     <li><a href="#portfolio" class="hover:text-white transition-colors">Our Portfolio</a></li>
                 </ul>
@@ -411,14 +460,12 @@ import Layout from '../layouts/Layout.astro';
 
     <script is:inline>
         document.getElementById('year').textContent = new Date().getFullYear();
-
         // Mobile Nav
         const mobileMenuButton = document.getElementById('mobileMenuButton');
         const mobileMenu = document.getElementById('mobileMenu');
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-
         // Close mobile menu when links are clicked
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
@@ -450,13 +497,15 @@ import Layout from '../layouts/Layout.astro';
             }
         }());
 
-        // Estimator Tool
+        // Estimator Tool State Engine
         const pageRange = document.getElementById('pageRange');
         const pageValue = document.getElementById('pageValue');
         const ecommerceOpt = document.getElementById('ecommerceOpt');
         const cmsOpt = document.getElementById('cmsOpt');
         const seoOpt = document.getElementById('seoOpt');
         const estimatedTotal = document.getElementById('estimatedTotal');
+        const claimEstimateBtn = document.getElementById('claimEstimateBtn');
+        const formMessage = document.getElementById('formMessage');
 
         function calculateEstimates() {
             const pages = parseInt(pageRange.value);
@@ -468,7 +517,10 @@ import Layout from '../layouts/Layout.astro';
             if (cmsOpt.checked) total += 600;
             if (seoOpt.checked) total += 350;
             if(estimatedTotal) estimatedTotal.textContent = "£" + total.toLocaleString('en-GB');
+            return { pages, total, ecommerce: ecommerceOpt.checked, cms: cmsOpt.checked, seo: seoOpt.checked };
         }
+
+        // Seamless Sync: Inject calculated plan setup into the details box automatically
         if(pageRange) {
             pageRange.addEventListener('input', calculateEstimates);
             ecommerceOpt.addEventListener('change', calculateEstimates);
@@ -476,12 +528,20 @@ import Layout from '../layouts/Layout.astro';
             seoOpt.addEventListener('change', calculateEstimates);
         }
 
+        if(claimEstimateBtn) {
+            claimEstimateBtn.addEventListener('click', (e) => {
+                const config = calculateEstimates();
+                if(formMessage) {
+                    formMessage.value = `Hi JSOS! I just ran a calculation on your estimator tool. I'm looking for a custom layout setup with approximately ${config.pages} pages.\n\nAdd-ons requested:\n- E-commerce/Booking: ${config.ecommerce ? 'Yes' : 'No'}\n- Content Dashboard: ${config.cms ? 'Yes' : 'No'}\n- Local SEO: ${config.seo ? 'Yes' : 'No'}\n\nBallpark Estimate: £${config.total}. Let's get this review underway!`;
+                }
+            });
+        }
+
         // Contact Form Submission Action
         const contactForm = document.getElementById('jsosContactForm');
         const formWrapper = document.getElementById('contactFormWrapper');
         const successState = document.getElementById('formSuccessState');
         const resetBtn = document.getElementById('resetFormBtn');
-
         if(contactForm) {
             contactForm.addEventListener('submit', (e) => {
                 e.preventDefault();
@@ -502,7 +562,6 @@ import Layout from '../layouts/Layout.astro';
         let points = [];
         const numPoints = 40;
         const maxDist = 140;
-
         function initCanvas() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
