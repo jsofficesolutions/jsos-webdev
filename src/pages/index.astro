@@ -1,144 +1,12 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover">
-    <title>JS Office Solutions | Premium Web Development</title>
-    
-    <!-- Google Fonts: Raleway & Montserrat from your attached files -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome for Premium Agency Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Raleway', 'sans-serif'],
-                        heading: ['Montserrat', 'sans-serif'],
-                    },
-                    colors: {
-                        jsos: {
-                            purple: '#663399',  /* Exact Deep Purple from your WordPress stylesheet */
-                            black: '#0C0910',   /* Exact Rich Black from your WordPress stylesheet */
-                            grey: '#898989',    /* Exact Neutral Grey from your WordPress stylesheet */
-                            darkgrey: '#141118',
-                            light: '#ffffff'
-                        }
-                    },
-                    animation: {
-                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-glow': 'pulseGlow 4s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(24px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        },
-                        pulseGlow: {
-                            '0%, 100%': { opacity: '0.2', transform: 'scale(1)' },
-                            '50%': { opacity: '0.4', transform: 'scale(1.15)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+---
+import Layout from '../layouts/Layout.astro';
+---
 
-    <style>
-        body {
-            background-color: #0C0910;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-
-        /* Replicating Custom CSS from JSOS WordPress: Transparent watermark headers */
-        .watermark-container {
-            position: relative;
-        }
-        .watermark-text {
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            white-space: nowrap;
-            font-size: clamp(60px, 14vw, 180px);
-            font-weight: 900;
-            line-height: 1;
-            font-family: 'Montserrat', sans-serif;
-            color: transparent;
-            -webkit-text-stroke: 1px rgba(102, 51, 153, 0.08);
-            letter-spacing: 0.1em;
-            pointer-events: none;
-            user-select: none;
-        }
-
-        /* Glassmorphism card utilities */
-        .glass-card {
-            background: rgba(20, 17, 24, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
-        }
-
-        .glass-card:hover {
-            border-color: rgba(102, 51, 153, 0.4);
-            box-shadow: 0 20px 40px -10px rgba(102, 51, 153, 0.15);
-        }
-
-        /* Portfolio Captions Replicating "The Whit Group" Layout */
-        .portfolio-grid-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 16px;
-        }
-        .portfolio-image {
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .portfolio-grid-item:hover .portfolio-image {
-            transform: scale(1.06);
-        }
-        .portfolio-overlay {
-            background: linear-gradient(to top, rgba(12, 9, 16, 0.95) 0%, rgba(102, 51, 153, 0.85) 100%);
-            opacity: 0;
-            transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .portfolio-grid-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
-
-        /* Custom Scrollbar matching colors */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0C0910; }
-        ::-webkit-scrollbar-thumb { background: #663399; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #8952c4; }
-
-        /* Selection highlight */
-        ::selection { background-color: #663399; color: #ffffff; }
-    </style>
-</head>
-<body class="antialiased selection:bg-jsos-purple selection:text-white font-sans">
-
-    <!-- Interactive Polygon Background (Replicating JSOS WordPress Video Background) -->
-    <div class="fixed inset-0 z-0 pointer-events-auto">
-        <canvas id="polygonCanvas" class="w-full h-full opacity-40"></canvas>
+<Layout title="JS Office Solutions | High-Performance Websites for Small Businesses">
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <canvas id="polygonCanvas" class="w-full h-full opacity-30"></canvas>
     </div>
 
-    <!-- Navigation Header -->
     <nav class="fixed w-full z-50 bg-jsos-black/80 backdrop-blur-lg border-b border-white/5 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-3 group">
@@ -151,214 +19,183 @@
             </a>
             
             <div class="hidden md:flex space-x-10 text-sm font-semibold tracking-wider uppercase text-jsos-grey">
-                <a href="#services" class="hover:text-white transition-colors py-2">Services</a>
-                <a href="#estimator" class="hover:text-white transition-colors py-2">Cost Estimator</a>
-                <a href="#portfolio" class="hover:text-white transition-colors py-2">Our Portfolio</a>
-                <a href="#approach" class="hover:text-white transition-colors py-2">The Stack</a>
+                <a href="#services" class="hover:text-white transition-colors py-2">What We Do</a>
+                <a href="#estimator" class="hover:text-white transition-colors py-2">Price Calculator</a>
+                <a href="#portfolio" class="hover:text-white transition-colors py-2">Our Work</a>
+                <a href="#approach" class="hover:text-white transition-colors py-2">Why It Matters</a>
             </div>
             
             <a href="#contact" class="hidden md:inline-flex items-center justify-center px-6 py-3 text-sm font-bold uppercase tracking-wider text-white transition-all bg-jsos-purple rounded-xl hover:bg-purple-700 hover:shadow-[0_0_25px_rgba(102,51,153,0.5)] transform hover:-translate-y-0.5 duration-300">
                 LET'S TALK
             </a>
 
-            <!-- Mobile Menu Toggle Button -->
             <button class="md:hidden text-white p-2 focus:outline-none" id="mobileMenuButton">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
 
-        <!-- Mobile Nav Menu Drawer -->
         <div class="hidden" id="mobileMenu">
             <div class="px-6 pt-2 pb-6 bg-jsos-black/95 border-b border-white/10 flex flex-col space-y-4 text-center">
-                <a href="#services" class="text-lg font-medium text-white py-2">Services</a>
-                <a href="#estimator" class="text-lg font-medium text-white py-2">Cost Estimator</a>
-                <a href="#portfolio" class="text-lg font-medium text-white py-2">Our Portfolio</a>
-                <a href="#approach" class="text-lg font-medium text-white py-2">The Stack</a>
+                <a href="#services" class="text-lg font-medium text-white py-2">What We Do</a>
+                <a href="#estimator" class="text-lg font-medium text-white py-2">Price Calculator</a>
+                <a href="#portfolio" class="text-lg font-medium text-white py-2">Our Work</a>
+                <a href="#approach" class="text-lg font-medium text-white py-2">Why It Matters</a>
                 <a href="#contact" class="bg-jsos-purple text-white py-3 rounded-xl font-bold uppercase tracking-wider">LET'S TALK</a>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content Wrapper (Above Particle Background) -->
     <main class="relative z-10">
-
-        <!-- Hero Section with typing animation and dynamic visualizer -->
         <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
-            <!-- Background Glowing Radial Orbs -->
-            <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-jsos-purple/15 rounded-full blur-[160px] animate-pulse-slow pointer-events-none"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-900/10 rounded-full blur-[140px] pointer-events-none"></div>
+            <div class="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-jsos-purple/15 rounded-full blur-[160px] pointer-events-none"></div>
 
             <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-16 items-center">
                 <div class="lg:col-span-7 text-left space-y-8">
-                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-jsos-purple/10 border border-jsos-purple/20 shadow-inner">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-jsos-purple/10 border border-jsos-purple/20">
                         <span class="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse"></span>
-                        <span class="text-xs font-semibold uppercase tracking-wider text-jsos-purple">Astro & React Architects</span>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-jsos-purple">Built For Business Growth</span>
                     </div>
                     
-                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05] font-heading">
-                        Engineered for <br />
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-jsos-purple via-purple-400 to-white" id="typingText"></span><span class="text-jsos-purple text-5xl md:text-7xl font-light">|</span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.05] font-heading text-white">
+                        Websites built to <br />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-jsos-purple via-purple-400 to-white" id="typingText"></span><span class="text-jsos-purple font-light">|</span>
                     </h1>
                     
                     <p class="text-lg md:text-xl text-jsos-grey max-w-xl leading-relaxed">
-                        We build high-velocity custom websites for growing small businesses. Moving past slow, legacy WordPress builders, we code in static-first Astro to elevate speed, SEO, and security.
+                        We build ultra-fast, custom websites that turn local search traffic into paying clients. Say goodbye to slow templates that frustrate your visitors.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-5 pt-4">
                         <a href="#contact" class="px-8 py-4 bg-jsos-purple text-white font-bold rounded-xl hover:bg-purple-700 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(102,51,153,0.8)] transition-all duration-300 text-center flex items-center justify-center gap-3 tracking-wider uppercase text-sm">
-                            Get A Quote
+                            Get A Free Proposal
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                         <a href="#portfolio" class="px-8 py-4 glass-card text-white font-bold rounded-xl hover:bg-white/10 transition-all duration-300 text-center text-sm uppercase tracking-wider">
-                            Explore Portfolio
+                            See Our Work
                         </a>
                     </div>
                 </div>
 
-                <!-- Hero Graphic (Abstract Interactive Code/Performance Visualizer) -->
                 <div class="lg:col-span-5 relative hidden lg:block animate-float">
                     <div class="relative w-full aspect-square max-w-[500px] mx-auto">
-                        <!-- IDE Glass Card Simulation -->
                         <div class="absolute inset-2 glass-card rounded-3xl p-6 flex flex-col gap-4 shadow-2xl overflow-hidden z-20">
-                            <!-- Visual Title Bar -->
                             <div class="flex items-center justify-between border-b border-white/5 pb-4">
                                 <div class="flex items-center gap-2">
                                     <span class="w-3 h-3 rounded-full bg-red-500"></span>
                                     <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
                                     <span class="w-3 h-3 rounded-full bg-green-500"></span>
                                 </div>
-                                <div class="text-xs text-jsos-grey font-mono flex items-center gap-1">
-                                    <i class="fa-brands fa-react text-sky-400"></i> App.astro
-                                </div>
-                                <span class="text-xs px-2.5 py-0.5 bg-green-400/10 text-green-400 rounded-full font-bold">100% PageSpeed</span>
+                                <span class="text-xs px-2.5 py-0.5 bg-green-400/10 text-green-400 rounded-full font-bold">100% Mobile Optimized</span>
                             </div>
-                            <!-- Mock Code Blocks with glows -->
-                            <div class="font-mono text-xs space-y-3.5 flex-1 select-none">
-                                <p class="text-jsos-purple">&lt;Navbar <span class="text-purple-300">sticky</span> /&gt;</p>
-                                <p class="text-blue-300 pl-4">&lt;HeroSection&gt;</p>
-                                <p class="text-jsos-grey pl-8">&lt;h1 class="font-heading"&gt;</p>
-                                <p class="text-white pl-12">JS Office Solutions</p>
-                                <p class="text-jsos-grey pl-8">&lt;/h1&gt;</p>
-                                <p class="text-yellow-400 pl-8">&lt;Button <span class="text-yellow-200">id="convert"</span>&gt;</p>
-                                <p class="text-green-300 pl-12">Start Journey</p>
-                                <p class="text-yellow-400 pl-8">&lt;/Button&gt;</p>
-                                <p class="text-blue-300 pl-4">&lt;/HeroSection&gt;</p>
+                            <div class="font-mono text-xs space-y-3.5 flex-1 select-none text-jsos-grey">
+                                <p class="text-jsos-purple">&lt;LocalBusiness&gt;</p>
+                                <p class="text-blue-300 pl-4">Fast Loading Speed: <span class="text-green-400">Excellent</span></p>
+                                <p class="text-blue-300 pl-4">Google Search SEO: <span class="text-green-400">Optimized</span></p>
+                                <p class="text-blue-300 pl-4">Secure Hosting: <span class="text-green-400">Included</span></p>
+                                <p class="text-jsos-purple">&lt;/LocalBusiness&gt;</p>
                                 <div class="pt-4 border-t border-white/5 flex justify-between items-center text-[10px]">
                                     <span class="text-emerald-400 font-bold flex items-center gap-1">
-                                        <i class="fa-solid fa-cloud-bolt"></i> Cloudflare Edge Active
+                                        <i class="fa-solid fa-shield-halved"></i> Enterprise-Grade Security
                                     </span>
-                                    <span class="text-jsos-grey">UTC +1 (Essex)</span>
+                                    <span class="text-jsos-grey">Based in Essex</span>
                                 </div>
                             </div>
                         </div>
                         <div class="absolute inset-0 bg-jsos-purple/20 rounded-3xl rotate-6 blur-sm z-10"></div>
-                        <div class="absolute inset-0 bg-blue-500/10 rounded-3xl -rotate-3 blur-sm z-10"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section with Watermark headers matching your file style -->
         <section id="services" class="py-32 relative bg-jsos-darkgrey/40">
             <div class="max-w-7xl mx-auto px-6">
-                
-                <!-- Watermark Layout Component -->
                 <div class="watermark-container text-center mb-24">
-                    <span class="watermark-text">EXPERTIS</span>
-                    <h2 class="text-jsos-purple font-bold uppercase tracking-widest text-sm mb-4">OUR CAPABILITIES</h2>
-                    <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Uncompromising Web Standards</h3>
+                    <span class="watermark-text">SERVICES</span>
+                    <h2 class="text-jsos-purple font-bold uppercase tracking-widest text-sm mb-4">WHAT WE DELIVER</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Everything You Need to Win Online</h3>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Custom Dev -->
                     <div class="glass-card p-10 rounded-2xl transition-all duration-300 group border border-white/5 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-jsos-purple/10 blur-2xl rounded-full"></div>
                         <div class="w-14 h-14 bg-jsos-purple/20 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fa-solid fa-code text-2xl text-jsos-purple"></i>
+                            <i class="fa-solid fa-bolt text-2xl text-jsos-purple"></i>
                         </div>
-                        <h4 class="text-2xl font-bold mb-4 font-heading text-white">Astro Jamstack Sites</h4>
+                        <h4 class="text-2xl font-bold mb-4 font-heading text-white">Lightning-Fast Sites</h4>
                         <p class="text-jsos-grey leading-relaxed">
-                            Engineered for zero-JavaScript-by-default runtime footprint. We deliver static html sites with unparalleled speed, boosting local SEO rankings instantly.
+                            Most business sites are bogged down by clunky, outdated plugins. We custom-code your site from the ground up so it loads instantly on every smartphone, ensuring you never lose a customer to a slow page load.
                         </p>
                     </div>
 
-                    <!-- Conversion Focused -->
                     <div class="glass-card p-10 rounded-2xl transition-all duration-300 group border border-white/5 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500/5 blur-2xl rounded-full"></div>
                         <div class="w-14 h-14 bg-jsos-purple/20 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fa-solid fa-chart-line text-2xl text-jsos-purple"></i>
+                            <i class="fa-solid fa-basket-shopping text-2xl text-jsos-purple"></i>
                         </div>
-                        <h4 class="text-2xl font-bold mb-4 font-heading text-white">eCommerce Architectures</h4>
+                        <h4 class="text-2xl font-bold mb-4 font-heading text-white">Seamless Online Shops</h4>
                         <p class="text-jsos-grey leading-relaxed">
-                            Deploy high-conversion ecommerce flows using headless tools like Shopify, Snipcart, or custom Stripe backends, built directly inside your static components.
+                            Ready to accept payments or manage bookings online? We integrate secure checkout flows and scheduling systems right into your site, making it effortless for your clients to do business with you.
                         </p>
                     </div>
 
-                    <!-- Security and IT support integrated -->
                     <div class="glass-card p-10 rounded-2xl transition-all duration-300 group border border-white/5 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-jsos-purple/10 blur-2xl rounded-full"></div>
                         <div class="w-14 h-14 bg-jsos-purple/20 rounded-xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-300">
-                            <i class="fa-solid fa-shield-halved text-2xl text-jsos-purple"></i>
+                            <i class="fa-solid fa-lock text-2xl text-jsos-purple"></i>
                         </div>
-                        <h4 class="text-2xl font-bold mb-4 font-heading text-white">MSP Grade Shielding</h4>
+                        <h4 class="text-2xl font-bold mb-4 font-heading text-white">Bulletproof Security</h4>
                         <p class="text-jsos-grey leading-relaxed">
-                            Drawing from our deep IT support background, we harden every deployment. Safe from database injection, SQL attacks, and backed by high-tier Cloudflare setups.
+                            Leveraging our background in IT systems administration, we lock down your site to make it practically immune to hacking attempts. Sleep easy knowing your customer data and business asset remain perfectly safe.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Interactive Cost Estimator Tool -->
         <section id="estimator" class="py-32 relative bg-jsos-black">
             <div class="max-w-4xl mx-auto px-6">
                 <div class="watermark-container text-center mb-16">
-                    <span class="watermark-text">BUDGETS</span>
-                    <h2 class="text-jsos-purple font-bold uppercase tracking-widest text-sm mb-4">ESTIMATE YOUR VALUE</h2>
-                    <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Bespoke Feature Configurator</h3>
+                    <span class="watermark-text">PRICING</span>
+                    <h2 class="text-jsos-purple font-bold uppercase tracking-widest text-sm mb-4">TRANSPARENT VALUE</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Build Your Plan</h3>
                 </div>
 
                 <div class="glass-card p-8 md:p-12 rounded-3xl border border-white/10 space-y-8">
-                    <p class="text-center text-jsos-grey">Adjust the configurations below to see estimated investments in high-velocity custom builds.</p>
+                    <p class="text-center text-jsos-grey">Adjust the configuration below to view a ballpark estimate for your brand new custom website.</p>
                     
                     <div class="grid md:grid-cols-2 gap-8 pt-4">
-                        <!-- Left Controls -->
                         <div class="space-y-6">
                             <div>
                                 <label class="block text-sm font-semibold uppercase tracking-wider text-white mb-2" id="pageLabel">
-                                    Number of Custom Pages: <span class="text-jsos-purple" id="pageValue">5</span>
+                                    Number of Core Pages: <span class="text-jsos-purple" id="pageValue">5</span>
                                 </label>
                                 <input type="range" min="1" max="25" value="5" class="w-full accent-jsos-purple h-2 bg-white/10 rounded-lg appearance-none cursor-pointer" id="pageRange">
                             </div>
 
                             <div>
-                                <span class="block text-sm font-semibold uppercase tracking-wider text-white mb-3">Add-On Integrations</span>
+                                <span class="block text-sm font-semibold uppercase tracking-wider text-white mb-3">Optional Add-ons</span>
                                 <div class="space-y-3">
                                     <label class="flex items-center gap-3 cursor-pointer">
                                         <input type="checkbox" id="ecommerceOpt" class="w-4 h-4 rounded text-jsos-purple accent-jsos-purple bg-white/10 border-none">
-                                        <span class="text-sm text-jsos-grey hover:text-white">Headless eCommerce Flow (+£950)</span>
+                                        <span class="text-sm text-jsos-grey hover:text-white">Online Store / Product Setup (+£950)</span>
                                     </label>
                                     <label class="flex items-center gap-3 cursor-pointer">
                                         <input type="checkbox" id="cmsOpt" class="w-4 h-4 rounded text-jsos-purple accent-jsos-purple bg-white/10 border-none">
-                                        <span class="text-sm text-jsos-grey hover:text-white">Bespoke CMS Admin Panel (+£600)</span>
+                                        <span class="text-sm text-jsos-grey hover:text-white">Content Editing Dashboard (+£600)</span>
                                     </label>
                                     <label class="flex items-center gap-3 cursor-pointer">
                                         <input type="checkbox" id="seoOpt" checked class="w-4 h-4 rounded text-jsos-purple accent-jsos-purple bg-white/10 border-none">
-                                        <span class="text-sm text-jsos-grey hover:text-white">Premium Technical SEO Package (+£350)</span>
+                                        <span class="text-sm text-jsos-grey hover:text-white">Local Search Setup & SEO Package (+£350)</span>
                                     </label>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Right Total Display -->
                         <div class="bg-jsos-purple/10 border border-jsos-purple/30 rounded-2xl p-8 flex flex-col justify-between items-center text-center">
                             <div>
                                 <span class="text-xs uppercase tracking-widest text-jsos-purple font-extrabold block mb-1">Estimated Investment</span>
                                 <span class="text-5xl font-black font-heading tracking-tight text-white block my-2" id="estimatedTotal">£1,450</span>
-                                <p class="text-xs text-jsos-grey mt-2">Inclusive of Cloudflare hosting setup & launch optimization support.</p>
+                                <p class="text-xs text-jsos-grey mt-2">Includes managed cloud hosting setup and continuous speed optimization checks.</p>
                             </div>
                             <a href="#contact" class="w-full mt-6 py-3 bg-jsos-purple text-white font-bold rounded-xl hover:bg-purple-700 transition-colors text-center text-sm uppercase tracking-wider">
-                                Secure This Estimate
+                                Claim This Estimate
                             </a>
                         </div>
                     </div>
@@ -366,149 +203,76 @@
             </div>
         </section>
 
-        <!-- Whit Group Replicated Portfolio Showcase -->
         <section id="portfolio" class="py-32 relative bg-jsos-darkgrey/40 border-y border-white/5">
             <div class="max-w-7xl mx-auto px-6">
-                
                 <div class="watermark-container text-center mb-16">
                     <span class="watermark-text">PORTFOLIO</span>
                     <h2 class="text-jsos-purple font-bold uppercase tracking-widest text-sm mb-4">OUR WORK</h2>
-                    <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Bespoke Client Deployments</h3>
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Built For Local Leaders</h3>
                 </div>
 
-                <!-- Filter Controls matching premium aesthetic -->
                 <div class="flex flex-wrap justify-center gap-4 mb-16">
-                    <button class="portfolio-filter-btn px-6 py-2 rounded-full font-bold text-sm tracking-wider uppercase border border-jsos-purple bg-jsos-purple text-white transition-all duration-300" data-filter="all">All</button>
-                    <button class="portfolio-filter-btn px-6 py-2 rounded-full font-bold text-sm tracking-wider uppercase border border-white/10 text-jsos-grey hover:border-white hover:text-white transition-all duration-300" data-filter="custom">Custom Web</button>
-                    <button class="portfolio-filter-btn px-6 py-2 rounded-full font-bold text-sm tracking-wider uppercase border border-white/10 text-jsos-grey hover:border-white hover:text-white transition-all duration-300" data-filter="ecommerce">eCommerce</button>
-                    <button class="portfolio-filter-btn px-6 py-2 rounded-full font-bold text-sm tracking-wider uppercase border border-white/10 text-jsos-grey hover:border-white hover:text-white transition-all duration-300" data-filter="saas">SaaS Apps</button>
+                    <button class="portfolio-filter-btn px-6 py-2 rounded-full font-bold text-sm tracking-wider uppercase border border-jsos-purple bg-jsos-purple text-white transition-all duration-300" data-filter="all">All Projects</button>
+                    <button class="portfolio-filter-btn px-6 py-2 rounded-full font-bold text-sm tracking-wider uppercase border border-white/10 text-jsos-grey hover:border-white hover:text-white transition-all duration-300" data-filter="custom">Business Websites</button>
+                    <button class="portfolio-filter-btn px-6 py-2 rounded-full font-bold text-sm tracking-wider uppercase border border-white/10 text-jsos-grey hover:border-white hover:text-white transition-all duration-300" data-filter="ecommerce">E-Commerce</button>
                 </div>
 
-                <!-- Portfolio Grid Replicating The Whit Group Item Caption/Hovers -->
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolioContainer">
-                    
-                    <!-- Portfolio Item 1 -->
                     <div class="portfolio-grid-item border border-white/5 relative group cursor-pointer h-[380px]" data-category="custom">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Winters Recreation Mockup" class="portfolio-image w-full h-full object-cover">
+                        <div class="w-full h-full bg-gradient-to-br from-purple-900 to-black absolute inset-0 opacity-40"></div>
                         <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8">
-                            <span class="text-white text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                                <i class="fa-regular fa-square-plus"></i>
-                            </span>
                             <strong class="text-2xl text-white font-heading tracking-wide">Winters Recreation</strong>
-                            <p class="text-jsos-purple font-medium mt-1">High-Speed Headless Astro Web Design</p>
+                            <p class="text-jsos-purple font-medium mt-1">High-Speed Business Showcase</p>
                         </div>
                     </div>
-
-                    <!-- Portfolio Item 2 -->
                     <div class="portfolio-grid-item border border-white/5 relative group cursor-pointer h-[380px]" data-category="ecommerce">
-                        <img src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&q=80" alt="Coast to Coast Mockup" class="portfolio-image w-full h-full object-cover">
+                        <div class="w-full h-full bg-gradient-to-br from-indigo-900 to-black absolute inset-0 opacity-40"></div>
                         <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8">
-                            <span class="text-white text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                                <i class="fa-regular fa-square-plus"></i>
-                            </span>
                             <strong class="text-2xl text-white font-heading tracking-wide">Coast to Coast Storage</strong>
-                            <p class="text-jsos-purple font-medium mt-1">eCommerce and Secure Booking Hub</p>
+                            <p class="text-jsos-purple font-medium mt-1">Secure Booking & Payments Hub</p>
                         </div>
                     </div>
-
-                    <!-- Portfolio Item 3 -->
-                    <div class="portfolio-grid-item border border-white/5 relative group cursor-pointer h-[380px]" data-category="saas">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="BackForty Mockup" class="portfolio-image w-full h-full object-cover">
-                        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8">
-                            <span class="text-white text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                                <i class="fa-regular fa-square-plus"></i>
-                            </span>
-                            <strong class="text-2xl text-white font-heading tracking-wide">BackForty App Platform</strong>
-                            <p class="text-jsos-purple font-medium mt-1">Headless Client Dashboard Platform</p>
-                        </div>
-                    </div>
-
-                    <!-- Portfolio Item 4 -->
                     <div class="portfolio-grid-item border border-white/5 relative group cursor-pointer h-[380px]" data-category="custom">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Mayfield Homes Mockup" class="portfolio-image w-full h-full object-cover">
+                        <div class="w-full h-full bg-gradient-to-br from-violet-900 to-black absolute inset-0 opacity-40"></div>
                         <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8">
-                            <span class="text-white text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                                <i class="fa-regular fa-square-plus"></i>
-                            </span>
                             <strong class="text-2xl text-white font-heading tracking-wide">Mayfield Homes</strong>
-                            <p class="text-jsos-purple font-medium mt-1">Optimized Local Real Estate Showcase</p>
+                            <p class="text-jsos-purple font-medium mt-1">Local Real Estate Platform</p>
                         </div>
                     </div>
-
-                    <!-- Portfolio Item 5 -->
-                    <div class="portfolio-grid-item border border-white/5 relative group cursor-pointer h-[380px]" data-category="ecommerce">
-                        <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=800&q=80" alt="Tribly Music Mockup" class="portfolio-image w-full h-full object-cover">
-                        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8">
-                            <span class="text-white text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                                <i class="fa-regular fa-square-plus"></i>
-                            </span>
-                            <strong class="text-2xl text-white font-heading tracking-wide">Tribly Collection</strong>
-                            <p class="text-jsos-purple font-medium mt-1">Stripe-Powered Audio Market</p>
-                        </div>
-                    </div>
-
-                    <!-- Portfolio Item 6 -->
-                    <div class="portfolio-grid-item border border-white/5 relative group cursor-pointer h-[380px]" data-category="custom">
-                        <img src="https://images.unsplash.com/photo-1519074069444-1ba4e2663144?auto=format&fit=crop&w=800&q=80" alt="RK Litigators" class="portfolio-image w-full h-full object-cover">
-                        <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8">
-                            <span class="text-white text-3xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                                <i class="fa-regular fa-square-plus"></i>
-                            </span>
-                            <strong class="text-2xl text-white font-heading tracking-wide">RK Law Group</strong>
-                            <p class="text-jsos-purple font-medium mt-1">Bespoke Professional Web Hub</p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
 
-        <!-- Dynamic Tech stack integration details -->
         <section id="approach" class="py-32 relative bg-jsos-black">
             <div class="max-w-5xl mx-auto px-6 text-center space-y-12">
                 <div class="watermark-container mb-12">
-                    <span class="watermark-text">THE STACK</span>
+                    <span class="watermark-text">THE DIFFERENCE</span>
                     <h2 class="text-jsos-purple font-bold uppercase tracking-widest text-sm mb-4">OUR BLUEPRINT</h2>
-                    <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Static Delivery. Boundless Performance.</h3>
+                    <h3 class="text-4xl md:text-5xl font-extrabold text-white font-heading relative z-10">Modern Code. Real Business Growth.</h3>
                 </div>
                 
-                <div class="grid md:grid-cols-4 gap-8">
+                <div class="grid md:grid-cols-3 gap-8">
                     <div class="glass-card p-8 rounded-2xl border border-white/5">
-                        <div class="text-3xl text-jsos-purple mb-4">
-                            <i class="fa-brands fa-space-awesome"></i>
-                        </div>
-                        <h4 class="text-lg font-bold font-heading mb-2 text-white">Astro Core</h4>
-                        <p class="text-xs text-jsos-grey">Static-first build setup removing runtime bloat completely.</p>
+                        <div class="text-3xl text-jsos-purple mb-4"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <h4 class="text-lg font-bold font-heading mb-2 text-white">Mobile-First Build</h4>
+                        <p class="text-xs text-jsos-grey">Over 60% of your local clients look you up from a phone. Your site will be flawlessly responsive and instantly actionable.</p>
                     </div>
 
                     <div class="glass-card p-8 rounded-2xl border border-white/5">
-                        <div class="text-3xl text-jsos-purple mb-4">
-                            <i class="fa-brands fa-react"></i>
-                        </div>
-                        <h4 class="text-lg font-bold font-heading mb-2 text-white">Headless UI</h4>
-                        <p class="text-xs text-jsos-grey">Interactive React widgets hydrated exclusively when in viewport view.</p>
+                        <div class="text-3xl text-jsos-purple mb-4"><i class="fa-solid fa-magnifying-glass-arrow-right"></i></div>
+                        <h4 class="text-lg font-bold font-heading mb-2 text-white">Google Rank Ready</h4>
+                        <p class="text-xs text-jsos-grey">Google penalizes sluggish template setups. Our clean development strategies automatically support better local SEO placement.</p>
                     </div>
 
                     <div class="glass-card p-8 rounded-2xl border border-white/5">
-                        <div class="text-3xl text-jsos-purple mb-4">
-                            <i class="fa-solid fa-cloud-sun animate-pulse"></i>
-                        </div>
-                        <h4 class="text-lg font-bold font-heading mb-2 text-white">Cloudflare Edge</h4>
-                        <p class="text-xs text-jsos-grey">Web deployment instantly mapped to servers closer to your clients.</p>
-                    </div>
-
-                    <div class="glass-card p-8 rounded-2xl border border-white/5">
-                        <div class="text-3xl text-jsos-purple mb-4">
-                            <i class="fa-solid fa-bolt-lightning"></i>
-                        </div>
-                        <h4 class="text-lg font-bold font-heading mb-2 text-white">100/100 Core Web</h4>
-                        <p class="text-xs text-jsos-grey">Guaranteed stellar Lighthouse scores for an organic SEO boost.</p>
+                        <div class="text-3xl text-jsos-purple mb-4"><i class="fa-solid fa-heart-crack"></i></div>
+                        <h4 class="text-lg font-bold font-heading mb-2 text-white">Zero Maintenance Stress</h4>
+                        <p class="text-xs text-jsos-grey">No messy databases or broken plugins to check every weekend. Once it's launched, your site keeps working perfectly.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Whit Group styled Lead Contact Form -->
         <section id="contact" class="py-32 relative bg-jsos-darkgrey/40 border-t border-white/5">
             <div class="max-w-4xl mx-auto px-6">
                 <div class="watermark-container text-center mb-16">
@@ -523,158 +287,113 @@
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-xs font-bold uppercase tracking-wider text-jsos-grey mb-2">Your Name</label>
-                                    <input type="text" name="name" required class="w-full bg-jsos-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-jsos-purple transition-colors font-sans text-sm">
+                                    <input type="text" name="name" required class="w-full bg-jsos-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-jsos-purple transition-colors text-sm">
                                 </div>
                                 <div>
                                     <label class="block text-xs font-bold uppercase tracking-wider text-jsos-grey mb-2">Email Address</label>
-                                    <input type="email" name="email" required class="w-full bg-jsos-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-jsos-purple transition-colors font-sans text-sm">
+                                    <input type="email" name="email" required class="w-full bg-jsos-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-jsos-purple transition-colors text-sm">
                                 </div>
                             </div>
 
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
                                     <label class="block text-xs font-bold uppercase tracking-wider text-jsos-grey mb-2">Phone Number</label>
-                                    <input type="tel" name="phone" class="w-full bg-jsos-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-jsos-purple transition-colors font-sans text-sm">
+                                    <input type="tel" name="phone" class="w-full bg-jsos-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-jsos-purple transition-colors text-sm">
                                 </div>
                                 <div>
                                     <label class="block text-xs font-bold uppercase tracking-wider text-jsos-grey mb-2">Estimated Timeline</label>
-                                    <select name="timeline" class="w-full bg-jsos-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-jsos-purple transition-colors font-sans text-sm">
+                                    <select name="timeline" class="w-full bg-jsos-black/50 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-jsos-purple transition-colors text-sm">
                                         <option value="Urgent">Immediate Launch (&lt; 2 Weeks)</option>
-                                        <option value="Standard" selected>Standard Lifecycle (3-4 Weeks)</option>
-                                        <option value="Flexible">Planning Stage / Ongoing Collaboration</option>
+                                        <option value="Standard" selected>Standard Lifecyle (3-4 Weeks)</option>
+                                        <option value="Flexible">Planning Stage / Ongoing Support</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div>
-                                <label class="block text-xs font-bold uppercase tracking-wider text-jsos-grey mb-2">Project Vision & Parameters</label>
-                                <textarea name="message" rows="5" required placeholder="Let us know about your audience, required features, or legacy setups we are upgrading..." class="w-full bg-jsos-black/50 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-white/20 focus:outline-none focus:border-jsos-purple transition-colors font-sans text-sm"></textarea>
+                                <label class="block text-xs font-bold uppercase tracking-wider text-jsos-grey mb-2">Tell Us About Your Business</label>
+                                <textarea name="message" rows="5" required placeholder="Describe your target audience or any baseline issues your current site might be facing..." class="w-full bg-jsos-black/50 border border-white/10 rounded-xl px-5 py-4 text-white placeholder-white/20 focus:outline-none focus:border-jsos-purple transition-colors text-sm"></textarea>
                             </div>
 
                             <div class="pt-4">
                                 <button type="submit" class="w-full py-4 bg-jsos-purple text-white font-extrabold uppercase tracking-wider rounded-xl hover:bg-purple-700 hover:shadow-[0_0_30px_rgba(102,51,153,0.6)] transition-all duration-300">
-                                    Secure Free Consultation & Technical Audit
+                                    Request Free Consultation & Website Review
                                 </button>
                             </div>
                         </form>
                     </div>
 
-                    <!-- Custom Success State Replaces the clunky Alert window -->
                     <div id="formSuccessState" class="hidden text-center py-12 space-y-6">
-                        <div class="w-20 h-20 bg-green-500/10 border border-green-500/30 rounded-full flex items-center justify-center mx-auto text-green-400 text-3xl animate-bounce">
+                        <div class="w-20 h-20 bg-green-500/10 border border-green-500/30 rounded-full flex items-center justify-center mx-auto text-green-400 text-3xl">
                             <i class="fa-solid fa-circle-check"></i>
                         </div>
-                        <h4 class="text-3xl font-extrabold font-heading text-white">We've Received Your Specs!</h4>
-                        <p class="text-jsos-grey max-w-md mx-auto">One of our lead architects will analyze your site details and contact you via email shortly. Let's make some waves.</p>
-                        <button onclick="resetContactForm()" class="px-6 py-2.5 bg-white/5 border border-white/10 text-white rounded-lg hover:bg-white/10 transition-all text-xs uppercase tracking-widest font-bold">Submit Another Inquiry</button>
+                        <h4 class="text-3xl font-extrabold font-heading text-white">Inquiry Received!</h4>
+                        <p class="text-jsos-grey max-w-md mx-auto">We'll review your details and map out a growth blueprint for your company. Expect an email proposal shortly.</p>
+                        <button id="resetFormBtn" class="px-6 py-2.5 bg-white/5 border border-white/10 text-white rounded-lg hover:bg-white/10 transition-all text-xs uppercase tracking-widest font-bold">Submit Another Inquiry</button>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- Footer mirroring Sitemap structure from The Whit Group -->
     <footer class="relative z-10 border-t border-white/5 pt-24 pb-12 bg-[#060408]">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-16">
-            <!-- Brand Column -->
             <div class="space-y-6">
                 <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 bg-jsos-purple rounded-lg flex items-center justify-center text-white font-extrabold text-sm">
-                        JS
-                    </div>
-                    <span class="text-xl font-bold tracking-tight text-white font-heading">
-                        JS<span class="text-jsos-purple">OS</span>
-                    </span>
+                    <div class="w-8 h-8 bg-jsos-purple rounded-lg flex items-center justify-center text-white font-extrabold text-sm">JS</div>
+                    <span class="text-xl font-bold tracking-tight text-white font-heading">JS<span class="text-jsos-purple">OS</span></span>
                 </div>
-                <p class="text-sm text-jsos-grey leading-relaxed">
-                    Premium custom web design and application architectures for small businesses looking to command attention online.
-                </p>
-                <div class="flex gap-4">
-                    <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-jsos-grey hover:bg-jsos-purple hover:text-white transition-all"><i class="fa-brands fa-facebook-f text-xs"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-jsos-grey hover:bg-jsos-purple hover:text-white transition-all"><i class="fa-brands fa-twitter text-xs"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-jsos-grey hover:bg-jsos-purple hover:text-white transition-all"><i class="fa-brands fa-instagram text-xs"></i></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-jsos-grey hover:bg-jsos-purple hover:text-white transition-all"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
-                </div>
+                <p class="text-sm text-jsos-grey">Custom website design and management for small businesses looking to outshine competitors locally.</p>
             </div>
-
-            <!-- Quick Links -->
             <div>
-                <h4 class="text-white font-bold font-heading uppercase text-xs tracking-wider mb-6">Explore JSOS</h4>
+                <h4 class="text-white font-bold font-heading uppercase text-xs tracking-wider mb-6">Explore</h4>
                 <ul class="space-y-3.5 text-sm text-jsos-grey">
-                    <li><a href="#" class="hover:text-white transition-colors">Home Studio</a></li>
-                    <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
-                    <li><a href="#portfolio" class="hover:text-white transition-colors">Portfolio Grid</a></li>
-                    <li><a href="#estimator" class="hover:text-white transition-colors">Estimator Tool</a></li>
+                    <li><a href="#services" class="hover:text-white">Services</a></li>
+                    <li><a href="#estimator" class="hover:text-white">Estimator Tool</a></li>
                 </ul>
             </div>
-
-            <!-- Services Stack -->
             <div>
-                <h4 class="text-white font-bold font-heading uppercase text-xs tracking-wider mb-6">Our Solutions</h4>
+                <h4 class="text-white font-bold font-heading uppercase text-xs tracking-wider mb-6">Our Focus</h4>
                 <ul class="space-y-3.5 text-sm text-jsos-grey">
-                    <li><a href="#" class="hover:text-white transition-colors">Astro Development</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Headless E-Commerce</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">Local SEO Mastery</a></li>
-                    <li><a href="#" class="hover:text-white transition-colors">MSP IT Security Shielding</a></li>
+                    <li><span class="text-jsos-grey">Speed Architecture</span></li>
+                    <li><span class="text-jsos-grey">Local SEO Dominance</span></li>
                 </ul>
             </div>
-
-            <!-- Direct Contact Info -->
             <div>
                 <h4 class="text-white font-bold font-heading uppercase text-xs tracking-wider mb-6">Office Desk</h4>
-                <ul class="space-y-3.5 text-sm text-jsos-grey">
-                    <li class="flex items-center gap-3">
-                        <i class="fa-regular fa-envelope text-jsos-purple"></i>
-                        <a href="mailto:info@jsos.uk" class="hover:text-white transition-colors">info@jsos.uk</a>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fa-solid fa-location-dot text-jsos-purple"></i>
-                        <span>Romford, Essex, UK</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fa-solid fa-clock text-jsos-purple"></i>
-                        <span>Mon - Fri, 9am - 5:30pm</span>
-                    </li>
+                <ul class="space-y-3.5 text-sm text-jsos-grey text-xs">
+                    <li class="flex items-center gap-3"><i class="fa-regular fa-envelope text-jsos-purple"></i><a href="mailto:info@jsos.uk">info@jsos.uk</a></li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-jsos-purple"></i><span>Romford, Essex, UK</span></li>
                 </ul>
             </div>
         </div>
-
-        <div class="max-w-7xl mx-auto px-6 border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-jsos-grey">
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/5 pt-8 flex justify-between items-center text-xs text-jsos-grey">
             <p>&copy; <span id="year"></span> JS Office Solutions. All Rights Reserved.</p>
-            <div class="flex gap-6">
-                <a href="#" class="hover:text-white transition-colors">Terms of Business</a>
-                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-            </div>
         </div>
     </footer>
 
-    <!-- Interactive JS Core Logic -->
-    <script>
-        // Update year
+    <script is:inline>
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Mobile Nav Logic
+        // Mobile Nav
         const mobileMenuButton = document.getElementById('mobileMenuButton');
         const mobileMenu = document.getElementById('mobileMenu');
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Typing Loop Animation
-        const phraseArray = ["Bespoke Performance", "Lightning Speed", "Maximum SEO Impact"];
+        // Typing Loop
+        const phraseArray = ["Attract Customers", "Load Instantly", "Dominate Local Search"];
         let count = 0;
         let index = 0;
         let currentText = "";
         let letter = "";
         (function type() {
-            if (count === phraseArray.length) {
-                count = 0;
-            }
+            if (count === phraseArray.length) count = 0;
             currentText = phraseArray[count];
             letter = currentText.slice(0, ++index);
-
-            document.getElementById('typingText').textContent = letter;
+            const target = document.getElementById('typingText');
+            if(target) target.textContent = letter;
             if (letter.length === currentText.length) {
                 setTimeout(() => {
                     index = 0;
@@ -682,11 +401,11 @@
                     setTimeout(type, 1000);
                 }, 1500);
             } else {
-                setTimeout(type, 100);
+                setTimeout(type, 80);
             }
         }());
 
-        // Estimator Tool Real-time Interactive Logic
+        // Estimator Tool
         const pageRange = document.getElementById('pageRange');
         const pageValue = document.getElementById('pageValue');
         const ecommerceOpt = document.getElementById('ecommerceOpt');
@@ -696,59 +415,48 @@
 
         function calculateEstimates() {
             const pages = parseInt(pageRange.value);
-            pageValue.textContent = pages;
-            
-            let baseRate = 450; // Entry fee
+            if(pageValue) pageValue.textContent = pages;
+            let baseRate = 450;
             let costPerPage = 130;
-            
             let total = baseRate + (pages * costPerPage);
-            
             if (ecommerceOpt.checked) total += 950;
             if (cmsOpt.checked) total += 600;
             if (seoOpt.checked) total += 350;
-
-            estimatedTotal.textContent = "£" + total.toLocaleString('en-GB');
+            if(estimatedTotal) estimatedTotal.textContent = "£" + total.toLocaleString('en-GB');
+        }
+        if(pageRange) {
+            pageRange.addEventListener('input', calculateEstimates);
+            ecommerceOpt.addEventListener('change', calculateEstimates);
+            cmsOpt.addEventListener('change', calculateEstimates);
+            seoOpt.addEventListener('change', calculateEstimates);
         }
 
-        pageRange.addEventListener('input', calculateEstimates);
-        ecommerceOpt.addEventListener('change', calculateEstimates);
-        cmsOpt.addEventListener('change', calculateEstimates);
-        seoOpt.addEventListener('change', calculateEstimates);
+        // Contact Form Submission Action
+        const contactForm = document.getElementById('jsosContactForm');
+        const formWrapper = document.getElementById('contactFormWrapper');
+        const successState = document.getElementById('formSuccessState');
+        const resetBtn = document.getElementById('resetFormBtn');
 
-        // Portfolio filtering logic matching Whit Group controls
-        const filterButtons = document.querySelectorAll('.portfolio-filter-btn');
-        const portfolioItems = document.querySelectorAll('.portfolio-grid-item');
-
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Reset states
-                filterButtons.forEach(btn => {
-                    btn.classList.remove('bg-jsos-purple', 'text-white');
-                    btn.classList.add('border-white/10', 'text-jsos-grey');
-                });
-                
-                // Set active states
-                button.classList.add('bg-jsos-purple', 'text-white');
-                button.classList.remove('border-white/10', 'text-jsos-grey');
-
-                const filterVal = button.getAttribute('data-filter');
-
-                portfolioItems.forEach(item => {
-                    if (filterVal === 'all' || item.getAttribute('data-category') === filterVal) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
+        if(contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                formWrapper.classList.add('hidden');
+                successState.classList.remove('hidden');
             });
-        });
+            resetBtn.addEventListener('click', () => {
+                contactForm.reset();
+                successState.classList.add('hidden');
+                formWrapper.classList.remove('hidden');
+                calculateEstimates();
+            });
+        }
 
-        // Interactive Polygonal Background Animation (replaces video backgrounds with smooth interactive CPU rendering)
+        // Background Animation Context Setup
         const canvas = document.getElementById('polygonCanvas');
         const ctx = canvas.getContext('2d');
         let points = [];
-        const numPoints = 60;
-        const maxDist = 120;
+        const numPoints = 40;
+        const maxDist = 140;
 
         function initCanvas() {
             canvas.width = window.innerWidth;
@@ -758,8 +466,8 @@
                 points.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 0.4,
-                    vy: (Math.random() - 0.5) * 0.4,
+                    vx: (Math.random() - 0.5) * 0.3,
+                    vy: (Math.random() - 0.5) * 0.3,
                     r: Math.random() * 2 + 1
                 });
             }
@@ -767,13 +475,11 @@
 
         function drawPoints() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            // Draw lines
             for (let i = 0; i < points.length; i++) {
                 for (let j = i + 1; j < points.length; j++) {
                     const dist = Math.hypot(points[i].x - points[j].x, points[i].y - points[j].y);
                     if (dist < maxDist) {
-                        const alpha = (1 - dist / maxDist) * 0.15;
+                        const alpha = (1 - dist / maxDist) * 0.12;
                         ctx.strokeStyle = `rgba(102, 51, 153, ${alpha})`;
                         ctx.lineWidth = 1;
                         ctx.beginPath();
@@ -783,45 +489,20 @@
                     }
                 }
             }
-
-            // Move points
             points.forEach(p => {
                 p.x += p.vx;
                 p.y += p.vy;
-
                 if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
                 if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-
-                ctx.fillStyle = 'rgba(102, 51, 153, 0.4)';
+                ctx.fillStyle = 'rgba(102, 51, 153, 0.3)';
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
                 ctx.fill();
             });
-
             requestAnimationFrame(drawPoints);
         }
-
         window.addEventListener('resize', initCanvas);
         initCanvas();
         drawPoints();
-
-        // Contact Form Submission Action (Clean UI Modal Transitions)
-        const contactForm = document.getElementById('jsosContactForm');
-        const formWrapper = document.getElementById('contactFormWrapper');
-        const successState = document.getElementById('formSuccessState');
-
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            formWrapper.classList.add('hidden');
-            successState.classList.remove('hidden');
-        });
-
-        function resetContactForm() {
-            contactForm.reset();
-            successState.classList.add('hidden');
-            formWrapper.classList.remove('hidden');
-            calculateEstimates();
-        }
     </script>
-</body>
-</html>
+</Layout>
