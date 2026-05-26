@@ -4,15 +4,15 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="JS Office Solutions | High-Performance Websites for Small Businesses">
     <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-[#0C0910]">
-        <canvas id="polygonCanvas" class="absolute inset-0 w-full h-full opacity-40"></canvas>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-jsos-black/40 to-jsos-black pointer-events-none"></div>
+        <canvas id="polygonCanvas" class="absolute inset-0 w-full h-full opacity-75"></canvas>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-jsos-black/20 to-jsos-black pointer-events-none"></div>
     </div>
 
     <a 
         href="https://wa.me/447000000000" 
         target="_blank" 
         rel="noopener noreferrer" 
-        class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366] text-white shadow-[0_4px_25px_rgba(37,211,102,0.4)] hover:bg-[#20ba5a] hover:scale-110 active:scale-95 transition-all duration-300 group"
+        class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 rounded-full bg-jsos-purple text-white shadow-[0_4px_25px_rgba(102,51,153,0.5)] hover:bg-purple-700 hover:scale-110 active:scale-95 transition-all duration-300 group"
         aria-label="Chat with us on WhatsApp"
     >
         <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
@@ -42,7 +42,7 @@ import Layout from '../layouts/Layout.astro';
                 <a href="#portfolio" class="hover:text-white transition-colors py-2 relative group-link">Our Work</a>
             </div>
             
-            <a href="#contact" class="hidden md:inline-flex items-center justify-center px-7 py-3.5 text-xs font-bold uppercase tracking-widest text-white transition-all bg-jsos-purple rounded-xl hover:bg-purple-700 hover:shadow-[0_0_25px_rgba(102,51,153,0.5)] transform hover:-translate-y-0.5 duration-300">
+            <a href="#contact" class="hidden md:inline-flex items-center justify-center px-8 py-4 text-sm font-bold uppercase tracking-widest text-white transition-all bg-jsos-purple rounded-xl hover:bg-purple-700 hover:shadow-[0_0_25px_rgba(102,51,153,0.5)] transform hover:-translate-y-0.5 duration-300">
                 LET'S TALK
             </a>
 
@@ -58,13 +58,13 @@ import Layout from '../layouts/Layout.astro';
                 <a href="#process" class="text-lg font-bold text-white py-2.5 hover:text-jsos-purpleLight">How It Works</a>
                 <a href="#estimator" class="text-lg font-bold text-white py-2.5 hover:text-jsos-purpleLight">Price Calculator</a>
                 <a href="#portfolio" class="text-lg font-bold text-white py-2.5 hover:text-jsos-purpleLight">Our Work</a>
-                <a href="#contact" class="bg-jsos-purple text-white py-3.5 rounded-xl font-bold uppercase tracking-wider hover:bg-purple-700 transition-colors">LET'S TALK</a>
+                <a href="#contact" class="bg-jsos-purple text-white py-4 rounded-xl font-bold uppercase tracking-wider hover:bg-purple-700 transition-colors">LET'S TALK</a>
             </div>
         </div>
     </nav>
 
     <main class="relative z-10">
-        <section class="relative min-h-screen flex items-center justify-center pt-32 pb-24 overflow-hidden bg-transparent z-10 xl:px-12">
+        <section class="relative min-h-screen flex items-center justify-center pt-36 pb-24 overflow-hidden bg-transparent z-10 xl:px-12">
             <div class="absolute inset-0 z-0 pointer-events-none parallax-bg" data-speed="0.12">
                 <div class="absolute top-1/4 left-1/4 w-[700px] h-[700px] bg-jsos-purple/10 rounded-full blur-[180px]"></div>
                 <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-[150px]"></div>
@@ -86,12 +86,12 @@ import Layout from '../layouts/Layout.astro';
                         We engineering ultra-fast, bespoke websites that capture regional search engine traffic and transform clicks into premium long-term clients.
                     </p>
                     
-                    <div class="flex flex-col sm:flex-row gap-5 pt-2">
-                        <a href="#contact" class="px-8 py-4.5 bg-jsos-purple text-white font-extrabold rounded-xl hover:bg-purple-700 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(102,51,153,0.8)] active:translate-y-0 transition-all duration-300 text-center flex items-center justify-center gap-3 tracking-wider uppercase text-xs">
+                    <div class="flex flex-col sm:flex-row gap-5 pt-4">
+                        <a href="#contact" class="px-10 py-5 bg-jsos-purple text-white font-extrabold rounded-xl hover:bg-purple-700 hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(102,51,153,0.8)] active:translate-y-0 transition-all duration-300 text-center flex items-center justify-center gap-4 tracking-wider uppercase text-sm">
                             Get A Free Proposal
                             <i class="fa-solid fa-arrow-right animate-bounce-horizontal"></i>
                         </a>
-                        <a href="#estimator" class="px-8 py-4.5 glass-card text-white font-extrabold rounded-xl hover:bg-white/10 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 text-center text-xs uppercase tracking-wider">
+                        <a href="#estimator" class="px-10 py-5 glass-card text-white font-extrabold rounded-xl hover:bg-white/10 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 text-center text-sm uppercase tracking-wider">
                             Calculate Your Price
                         </a>
                     </div>
@@ -346,7 +346,7 @@ import Layout from '../layouts/Layout.astro';
                                     <i class="fa-solid fa-layer-group text-jsos-purpleLight mr-1.5"></i> Managed Edge Deployment Included
                                 </div>
                             </div>
-                            <a href="#contact" id="claimEstimateBtn" class="w-full mt-10 py-4.5 bg-jsos-purple text-white font-extrabold rounded-xl hover:bg-purple-700 hover:shadow-[0_0_20px_rgba(102,51,153,0.6)] active:scale-98 transition-all text-center text-xs uppercase tracking-widest">
+                            <a href="#contact" id="claimEstimateBtn" class="w-full mt-10 py-5 bg-jsos-purple text-white font-extrabold rounded-xl hover:bg-purple-700 hover:shadow-[0_0_20px_rgba(102,51,153,0.6)] active:scale-98 transition-all text-center text-sm uppercase tracking-widest">
                                 Lock In This Estimate
                             </a>
                         </div>
@@ -452,7 +452,7 @@ import Layout from '../layouts/Layout.astro';
                             </div>
 
                             <div class="pt-4">
-                                <button type="submit" class="w-full py-5 bg-jsos-purple text-white font-extrabold uppercase tracking-widest rounded-xl hover:bg-purple-700 hover:shadow-[0_0_30px_rgba(102,51,153,0.6)] active:scale-98 transition-all duration-300 text-xs">
+                                <button type="submit" class="w-full py-5 bg-jsos-purple text-white font-extrabold uppercase tracking-widest rounded-xl hover:bg-purple-700 hover:shadow-[0_0_30px_rgba(102,51,153,0.6)] active:scale-98 transition-all duration-300 text-sm">
                                     Request Free Consultation & Website Review
                                 </button>
                             </div>
@@ -465,7 +465,7 @@ import Layout from '../layouts/Layout.astro';
                         </div>
                         <h4 class="text-3xl font-extrabold font-heading text-white">Inquiry Securely Transmitted!</h4>
                         <p class="text-jsos-grey max-w-md mx-auto leading-relaxed text-base font-medium">Our tech team is auditing your criteria. Expect a comprehensive architectural growth proposal via your provided inbox shortly.</p>
-                        <button id="resetFormBtn" class="px-6 py-3 bg-white/5 border border-white/10 text-white rounded-lg hover:bg-white/10 transition-all text-xs uppercase tracking-widest font-bold">Submit Another Profile</button>
+                        <button id="resetFormBtn" class="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-lg hover:bg-white/10 transition-all text-xs uppercase tracking-widest font-bold">Submit Another Profile</button>
                     </div>
                 </div>
             </div>
@@ -550,7 +550,7 @@ import Layout from '../layouts/Layout.astro';
                     }
                 }
             });
-        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
 
         document.querySelectorAll('.reveal-element').forEach(element => revealObserver.observe(element));
 
@@ -567,11 +567,11 @@ import Layout from '../layouts/Layout.astro';
                 }
                 
                 let start = 0;
-                const duration = 1500; // Time in ms
+                const duration = 1500; 
                 const stepTime = Math.max(Math.floor(duration / target), 15);
                 
                 const timer = setInterval(() => {
-                    start += Math.ceil(target / 40); // Accelerative scaling incrementation
+                    start += Math.ceil(target / 40); 
                     if (start >= target) {
                         counter.textContent = target;
                         clearInterval(timer);
@@ -582,7 +582,7 @@ import Layout from '../layouts/Layout.astro';
             });
         }
 
-        // Smooth Pure-JS High-Performance CSS Parallax Engine Engine 
+        // Smooth Pure-JS High-Performance Parallax Engine Matrix
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             document.querySelectorAll('.parallax-bg').forEach(bg => {
@@ -685,7 +685,7 @@ import Layout from '../layouts/Layout.astro';
             });
         }
 
-        // Ambient Mouse Glow Positioning Tracking Logic
+        // Interactive Mouse Cursor Tracker glow logic
         document.querySelectorAll('.interactive-hover-card').forEach(card => {
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
@@ -696,12 +696,13 @@ import Layout from '../layouts/Layout.astro';
             });
         });
 
-        // FIXED HIGH-VISIBILITY PARTICLE FIELDS CANVAS GENERATOR
+        // HIGH-VISIBILITY INTERACTIVE PARTICLE CANVAS ARCHITECTURE
         const canvas = document.getElementById('polygonCanvas');
         const ctx = canvas.getContext('2d');
         let points = [];
-        const numPoints = 50;
-        const maxDist = 160;
+        const numPoints = 55;
+        const baseMaxDist = 160;
+        let mousePos = { x: null, y: null, maxDist: 220 };
 
         function initCanvas() {
             canvas.width = window.innerWidth;
@@ -711,23 +712,48 @@ import Layout from '../layouts/Layout.astro';
                 points.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 0.35,
-                    vy: (Math.random() - 0.5) * 0.35,
+                    vx: (Math.random() - 0.5) * 0.4,
+                    vy: (Math.random() - 0.5) * 0.4,
                     r: Math.random() * 2 + 1.5
                 });
             }
         }
 
+        // Connect cursor interactive tracking hooks
+        window.addEventListener('mousemove', (e) => {
+            mousePos.x = e.clientX;
+            mousePos.y = e.clientY;
+        });
+
+        window.addEventListener('mouseout', () => {
+            mousePos.x = null;
+            mousePos.y = null;
+        });
+
         function drawPoints() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
-            // Connect lines between intersecting paths
+            // Render connecting nodes logic path loops
             for (let i = 0; i < points.length; i++) {
+                // Interactive Cursor Mesh Manipulation attraction code
+                if (mousePos.x !== null && mousePos.y !== null) {
+                    const mDist = Math.hypot(points[i].x - mousePos.x, points[i].y - mousePos.y);
+                    if (mDist < mousePos.maxDist) {
+                        const mAlpha = (1 - mDist / mousePos.maxDist) * 0.35;
+                        ctx.strokeStyle = `rgba(192, 132, 252, ${mAlpha})`;
+                        ctx.lineWidth = 1.2;
+                        ctx.beginPath();
+                        ctx.moveTo(points[i].x, points[i].y);
+                        ctx.lineTo(mousePos.x, mousePos.y);
+                        ctx.stroke();
+                    }
+                }
+
                 for (let j = i + 1; j < points.length; j++) {
                     const dist = Math.hypot(points[i].x - points[j].x, points[i].y - points[j].y);
-                    if (dist < maxDist) {
-                        const alpha = (1 - dist / maxDist) * 0.22;
-                        ctx.strokeStyle = `rgba(192, 132, 252, ${alpha})`; // Bright purple lines
+                    if (dist < baseMaxDist) {
+                        const alpha = (1 - dist / baseMaxDist) * 0.28;
+                        ctx.strokeStyle = `rgba(192, 132, 252, ${alpha})`; 
                         ctx.lineWidth = 0.9;
                         ctx.beginPath();
                         ctx.moveTo(points[i].x, points[i].y);
@@ -737,7 +763,7 @@ import Layout from '../layouts/Layout.astro';
                 }
             }
 
-            // Draw individual dynamic nodes
+            // Draw individual nodes
             points.forEach(p => {
                 p.x += p.vx;
                 p.y += p.vy;
@@ -745,7 +771,7 @@ import Layout from '../layouts/Layout.astro';
                 if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
                 if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
                 
-                ctx.fillStyle = 'rgba(168, 85, 247, 0.55)'; // Distinct amethyst nodes
+                ctx.fillStyle = 'rgba(168, 85, 247, 0.65)'; 
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
                 ctx.fill();
