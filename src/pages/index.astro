@@ -4,8 +4,8 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="JS Office Solutions | High-Performance Websites for Small Businesses">
     <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-[#0C0910]">
-        <canvas id="polygonCanvas" class="absolute inset-0 w-full h-full opacity-75"></canvas>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-jsos-black/20 to-jsos-black pointer-events-none"></div>
+        <canvas id="polygonCanvas" class="absolute inset-0 w-full h-full opacity-90"></canvas>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-jsos-black/30 to-jsos-black pointer-events-none"></div>
     </div>
 
     <a 
@@ -65,9 +65,12 @@ import Layout from '../layouts/Layout.astro';
 
     <main class="relative z-10">
         <section class="relative min-h-screen flex items-center justify-center pt-36 pb-24 overflow-hidden bg-transparent z-10 xl:px-12">
-            <div class="absolute inset-0 z-0 pointer-events-none parallax-bg" data-speed="0.12">
-                <div class="absolute top-1/4 left-1/4 w-[700px] h-[700px] bg-jsos-purple/10 rounded-full blur-[180px]"></div>
-                <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-[150px]"></div>
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                <div class="absolute top-1/4 left-1/4 w-[700px] h-[700px] bg-jsos-purple/10 rounded-full blur-[180px] parallax-bg" data-speed="0.08"></div>
+                <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-purple-900/10 rounded-full blur-[150px] parallax-bg" data-speed="0.15"></div>
+                <div class="absolute top-12 right-1/3 w-3 h-3 bg-jsos-purpleLight/40 rounded-full blur-[1px] parallax-bg" data-speed="0.25"></div>
+                <div class="absolute bottom-1/3 left-10 w-5 h-5 bg-purple-500/20 rounded-full blur-[2px] parallax-bg" data-speed="0.18"></div>
+                <div class="absolute top-1/2 right-12 w-4 h-4 bg-white/30 rounded-full blur-[1px] parallax-bg" data-speed="0.32"></div>
             </div>
 
             <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-16 lg:gap-24 items-center w-full relative z-10">
@@ -77,13 +80,13 @@ import Layout from '../layouts/Layout.astro';
                         <span class="text-xs font-bold uppercase tracking-widest text-jsos-purpleLight">Enterprise-Grade Performance</span>
                     </div>
                     
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] font-heading text-white flex flex-col justify-start min-h-[160px] sm:min-h-[180px] md:min-h-[220px] lg:min-h-[250px]">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] font-heading text-white flex flex-col justify-start">
                         <span>Websites built to</span>
-                        <span class="min-h-[1.2em] block text-transparent bg-clip-text bg-gradient-to-r from-jsos-purpleLight via-purple-400 to-white font-black" id="typingText"></span>
+                        <span class="min-h-[1.2em] block text-transparent bg-clip-text bg-gradient-to-r from-jsos-purpleLight via-purple-400 to-white font-black" id="typingText">&nbsp;</span>
                     </h1>
                     
                     <p class="text-lg md:text-xl text-jsos-grey max-w-2xl leading-relaxed font-medium">
-                        We engineering ultra-fast, bespoke websites that capture regional search engine traffic and transform clicks into premium long-term clients.
+                        We engineer ultra-fast, bespoke websites that capture regional search engine traffic and transform clicks into premium long-term clients.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-5 pt-4">
@@ -91,8 +94,8 @@ import Layout from '../layouts/Layout.astro';
                             Get A Free Proposal
                             <i class="fa-solid fa-arrow-right animate-bounce-horizontal"></i>
                         </a>
-                        <a href="#estimator" class="px-10 py-5 glass-card text-white font-extrabold rounded-xl hover:bg-white/10 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 text-center text-sm uppercase tracking-wider">
-                            Calculate Your Price
+                        <a href="#estimator" class="px-10 py-5 glass-card text-white font-extrabold rounded-xl hover:bg-white/10 hover:-translate-y-1 active:translate-y-0 transition-all duration-300 text-center text-sm uppercase tracking-wider interactive-hover-card relative overflow-hidden">
+                            <span class="relative z-10">Calculate Your Price</span>
                         </a>
                     </div>
                     
@@ -102,10 +105,9 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
 
-                <div class="lg:col-span-5 relative hidden lg:block reveal-element delay-200">
-                    <div class="relative w-full aspect-square max-w-[480px] mx-auto interactive-hover-card rounded-3xl">
-                        <div class="absolute inset-0 bg-jsos-purple/20 rounded-3xl rotate-3 blur-md z-0 transition-transform duration-500 card-glow-layer"></div>
-                        <div class="absolute inset-2 glass-card rounded-3xl p-8 flex flex-col gap-6 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] border border-white/10 z-20 overflow-hidden">
+                <div class="lg:col-span-5 relative hidden lg:block reveal-element">
+                    <div class="relative w-full aspect-square max-w-[480px] mx-auto interactive-hover-card rounded-3xl overflow-hidden p-[1px]">
+                        <div class="absolute inset-0 glass-card rounded-3xl p-8 flex flex-col gap-6 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] border border-white/10 z-20 overflow-hidden h-full w-full">
                             <div class="flex items-center justify-between border-b border-white/5 pb-4">
                                 <div class="flex items-center gap-2">
                                     <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
@@ -135,9 +137,11 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <section id="services" class="py-40 relative bg-jsos-darkgrey/70 border-y border-white/5 overflow-hidden z-20 xl:px-12">
-            <div class="absolute inset-0 pointer-events-none parallax-bg" data-speed="-0.05">
-                <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-jsos-purple/5 rounded-full blur-[140px]"></div>
+        <section id="services" class="py-40 relative bg-jsos-black border-y border-white/5 overflow-hidden z-20 xl:px-12">
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-jsos-purple/5 rounded-full blur-[140px] parallax-bg" data-speed="-0.03"></div>
+                <div class="absolute top-1/3 left-12 w-2.5 h-2.5 bg-jsos-purpleLight/30 rounded-full blur-[1px] parallax-bg" data-speed="0.22"></div>
+                <div class="absolute bottom-10 right-1/4 w-4 h-4 bg-purple-600/10 rounded-full blur-[3px] parallax-bg" data-speed="0.14"></div>
             </div>
             
             <div class="max-w-7xl mx-auto px-6">
@@ -148,44 +152,55 @@ import Layout from '../layouts/Layout.astro';
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-10 lg:gap-12">
-                    <div class="glass-card p-10 lg:p-12 rounded-2xl border border-white/5 relative overflow-hidden interactive-hover-card reveal-element">
-                        <div class="w-14 h-14 bg-jsos-purple/20 border border-jsos-purple/30 rounded-xl flex items-center justify-center mb-8 shadow-[0_0_15px_rgba(102,51,153,0.2)]">
-                            <i class="fa-solid fa-bolt text-xl text-jsos-purpleLight"></i>
+                    <div class="interactive-hover-card p-[1px] rounded-2xl overflow-hidden reveal-element">
+                        <div class="glass-card p-10 lg:p-12 rounded-2xl border border-white/5 relative overflow-hidden h-full w-full">
+                            <div class="w-14 h-14 bg-jsos-purple/20 border border-jsos-purple/30 rounded-xl flex items-center justify-center mb-8 shadow-[0_0_15px_rgba(102,51,153,0.2)]">
+                                <i class="fa-solid fa-bolt text-xl text-jsos-purpleLight"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold mb-4 font-heading text-white tracking-tight">Lightning-Fast Infrastructure</h4>
+                            <p class="text-jsos-grey leading-relaxed font-medium text-sm lg:text-base">
+                                Most template configurations are weighted down by bad code and bulky plugins. We design websites cleanly from the engine up, scoring unmatched loading times that maximize client retention.
+                            </p>
                         </div>
-                        <h4 class="text-2xl font-bold mb-4 font-heading text-white tracking-tight">Lightning-Fast Infrastructure</h4>
-                        <p class="text-jsos-grey leading-relaxed font-medium text-sm lg:text-base">
-                            Most template configurations are weighted down by bad code and bulky plugins. We design websites cleanly from the engine up, scoring unmatched loading times that maximize client retention.
-                        </p>
                     </div>
 
-                    <div class="glass-card p-10 lg:p-12 rounded-2xl border border-white/5 relative overflow-hidden interactive-hover-card reveal-element delay-100">
-                        <div class="w-14 h-14 bg-jsos-purple/20 border border-jsos-purple/30 rounded-xl flex items-center justify-center mb-8 shadow-[0_0_15px_rgba(102,51,153,0.2)]">
-                            <i class="fa-solid fa-basket-shopping text-xl text-jsos-purpleLight"></i>
+                    <div class="interactive-hover-card p-[1px] rounded-2xl overflow-hidden reveal-element">
+                        <div class="glass-card p-10 lg:p-12 rounded-2xl border border-white/5 relative overflow-hidden h-full w-full">
+                            <div class="w-14 h-14 bg-jsos-purple/20 border border-jsos-purple/30 rounded-xl flex items-center justify-center mb-8 shadow-[0_0_15px_rgba(102,51,153,0.2)]">
+                                <i class="fa-solid fa-basket-shopping text-xl text-jsos-purpleLight"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold mb-4 font-heading text-white tracking-tight">Seamless E-Commerce</h4>
+                            <p class="text-jsos-grey leading-relaxed font-medium text-sm lg:text-base">
+                                Ready to collect immediate consumer deposits, secure digital client checkouts, or optimize scheduling logic? We deploy ultra-clean, high-availability booking frameworks explicitly built to convert.
+                            </p>
                         </div>
-                        <h4 class="text-2xl font-bold mb-4 font-heading text-white tracking-tight">Seamless E-Commerce</h4>
-                        <p class="text-jsos-grey leading-relaxed font-medium text-sm lg:text-base">
-                            Ready to collect immediate consumer deposits, secure digital client checkouts, or optimize scheduling logic? We deploy ultra-clean, high-availability booking frameworks explicitly built to convert.
-                        </p>
                     </div>
 
-                    <div class="glass-card p-10 lg:p-12 rounded-2xl border border-white/5 relative overflow-hidden interactive-hover-card reveal-element delay-200">
-                        <div class="w-14 h-14 bg-jsos-purple/20 border border-jsos-purple/30 rounded-xl flex items-center justify-center mb-8 shadow-[0_0_15px_rgba(102,51,153,0.2)]">
-                            <i class="fa-solid fa-shield-halved text-xl text-jsos-purpleLight"></i>
+                    <div class="interactive-hover-card p-[1px] rounded-2xl overflow-hidden reveal-element">
+                        <div class="glass-card p-10 lg:p-12 rounded-2xl border border-white/5 relative overflow-hidden h-full w-full">
+                            <div class="w-14 h-14 bg-jsos-purple/20 border border-jsos-purple/30 rounded-xl flex items-center justify-center mb-8 shadow-[0_0_15px_rgba(102,51,153,0.2)]">
+                                <i class="fa-solid fa-shield-halved text-xl text-jsos-purpleLight"></i>
+                            </div>
+                            <h4 class="text-2xl font-bold mb-4 font-heading text-white tracking-tight">Bulletproof Systems Security</h4>
+                            <p class="text-jsos-grey leading-relaxed font-medium text-sm lg:text-base">
+                                Leveraging enterprise systems engineering blueprints, we shield your hosting surface, eliminating server vulnerabilities and malicious script injections before they can start.
+                            </p>
                         </div>
-                        <h4 class="text-2xl font-bold mb-4 font-heading text-white tracking-tight">Bulletproof Systems Security</h4>
-                        <p class="text-jsos-grey leading-relaxed font-medium text-sm lg:text-base">
-                            Leveraging enterprise systems engineering blueprints, we shield your hosting surface, eliminating server vulnerabilities and malicious script injections before they can start.
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="blueprint" class="py-40 relative bg-gradient-to-br from-jsos-black via-[#130b1e] to-jsos-black overflow-hidden z-20 xl:px-12">
+        <section id="blueprint" class="py-40 relative bg-gradient-to-br from-jsos-darkgrey via-[#110d16] to-jsos-darkgrey overflow-hidden z-20 xl:px-12">
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-1/4 left-1/3 w-6 h-6 bg-purple-500/10 rounded-full blur-[1px] parallax-bg" data-speed="0.21"></div>
+                <div class="absolute bottom-1/3 right-10 w-3 h-3 bg-white/20 rounded-full blur-[2px] parallax-bg" data-speed="0.09"></div>
+            </div>
+
             <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
                 <div class="space-y-6 reveal-element">
                     <h2 class="text-jsos-purpleLight font-bold uppercase tracking-widest text-xs">OUR STRICT FRAMEWORK</h2>
-                    <h3 class="text-4xl md:text-5xl lg:text-6xl font-black text-white font-heading leading-tight">Built to Stand Alone. <br/>Engineered to Dominate.</h3>
+                    <h3 class="text-4xl md:text-5xl lg:text-6xl font-black text-white font-heading leading-tight">Built to Stand Alone.<br/>Engineered to Dominate.</h3>
                     <p class="text-jsos-grey font-medium leading-relaxed lg:text-base">
                         We don't use dragging templates, bloated themes, or cheap visual editors that produce messy code structures. We engineer custom architectures built to provide real speed, elite security, and visible local growth.
                     </p>
@@ -208,29 +223,37 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                 </div>
                 
-                <div class="relative grid grid-cols-2 gap-6 lg:gap-8 reveal-element">
+                <div class="relative grid grid-cols-2 gap-6 lg:gap-8">
                     <div class="space-y-6 lg:space-y-8">
-                        <div class="glass-card p-8 rounded-2xl border border-white/5 translate-y-8">
-                            <span class="text-4xl lg:text-5xl font-black text-jsos-purpleLight font-heading counter-value" data-target="100">%</span>
-                            <p class="text-white font-bold text-sm lg:text-base mt-2">Data Sovereignty</p>
-                            <p class="text-jsos-darkGreyText text-xs lg:text-sm mt-1">Total operational independence over your source configuration assets.</p>
+                        <div class="interactive-hover-card p-[1px] rounded-2xl overflow-hidden reveal-element translate-y-8">
+                            <div class="glass-card p-8 rounded-2xl border border-white/5 h-full w-full">
+                                <span class="text-4xl lg:text-5xl font-black text-jsos-purpleLight font-heading counter-value" data-target="100">%</span>
+                                <p class="text-white font-bold text-sm lg:text-base mt-2">Data Sovereignty</p>
+                                <p class="text-jsos-darkGreyText text-xs lg:text-sm mt-1">Total operational independence over your source configuration assets.</p>
+                            </div>
                         </div>
-                        <div class="glass-card p-8 rounded-2xl border border-white/5 translate-y-8">
-                            <span class="text-4xl lg:text-5xl font-black text-jsos-purpleLight font-heading flex items-center">&lt;<span class="counter-value" data-target="400">0</span>ms</span>
-                            <p class="text-white font-bold text-sm lg:text-base mt-2">Average Response</p>
-                            <p class="text-jsos-darkGreyText text-xs lg:text-sm mt-1">Lightning response parameters on any mobile device viewport.</p>
+                        <div class="interactive-hover-card p-[1px] rounded-2xl overflow-hidden reveal-element translate-y-8">
+                            <div class="glass-card p-8 rounded-2xl border border-white/5 h-full w-full">
+                                <span class="text-4xl lg:text-5xl font-black text-jsos-purpleLight font-heading flex items-center">&lt;<span class="counter-value" data-target="400">0</span>ms</span>
+                                <p class="text-white font-bold text-sm lg:text-base mt-2">Average Response</p>
+                                <p class="text-jsos-darkGreyText text-xs lg:text-sm mt-1">Lightning response parameters on any mobile device viewport.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="space-y-6 lg:space-y-8">
-                        <div class="glass-card p-8 rounded-2xl border border-white/5">
-                            <span class="text-4xl lg:text-5xl font-black text-jsos-purpleLight font-heading counter-value" data-target="0">0</span>
-                            <p class="text-white font-bold text-sm lg:text-base mt-2">Database Reliance</p>
-                            <p class="text-jsos-darkGreyText text-xs lg:text-sm mt-1">Static build mechanics ensure zero security exploit surfaces.</p>
+                        <div class="interactive-hover-card p-[1px] rounded-2xl overflow-hidden reveal-element">
+                            <div class="glass-card p-8 rounded-2xl border border-white/5 h-full w-full">
+                                <span class="text-4xl lg:text-5xl font-black text-jsos-purpleLight font-heading counter-value" data-target="0">0</span>
+                                <p class="text-white font-bold text-sm lg:text-base mt-2">Database Reliance</p>
+                                <p class="text-jsos-darkGreyText text-xs lg:text-sm mt-1">Static build mechanics ensure zero security exploit surfaces.</p>
+                            </div>
                         </div>
-                        <div class="glass-card p-8 rounded-2xl border border-white/5">
-                            <span class="text-4xl lg:text-5xl font-black text-jsos-purpleLight font-heading flex items-center"><span class="counter-value" data-target="24">0</span>/7</span>
-                            <p class="text-white font-bold text-sm lg:text-base mt-2">Active Guarding</p>
-                            <p class="text-jsos-darkGreyText text-xs lg:text-sm mt-1">Monitored deployments mean no broken updates over weekends.</p>
+                        <div class="interactive-hover-card p-[1px] rounded-2xl overflow-hidden reveal-element">
+                            <div class="glass-card p-8 rounded-2xl border border-white/5 h-full w-full">
+                                <span class="text-4xl lg:text-5xl font-black text-jsos-purpleLight font-heading flex items-center"><span class="counter-value" data-target="24">0</span>/7</span>
+                                <p class="text-white font-bold text-sm lg:text-base mt-2">Active Guarding</p>
+                                <p class="text-jsos-darkGreyText text-xs lg:text-sm mt-1">Monitored deployments mean no broken updates over weekends.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -238,6 +261,10 @@ import Layout from '../layouts/Layout.astro';
         </section>
 
         <section id="process" class="py-40 relative bg-jsos-black border-t border-white/5 z-20 xl:px-12">
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute top-12 left-1/4 w-3.5 h-3.5 bg-jsos-purpleLight/20 rounded-full blur-[1px] parallax-bg" data-speed="0.28"></div>
+            </div>
+
             <div class="max-w-7xl mx-auto px-6">
                 <div class="watermark-container text-center mb-28 reveal-element">
                     <span class="watermark-text">SIMPLE</span>
@@ -246,40 +273,50 @@ import Layout from '../layouts/Layout.astro';
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-10 lg:gap-12 relative z-10">
-                    <div class="glass-card p-8 lg:p-10 rounded-2xl border border-white/5 relative reveal-element">
-                        <div class="absolute -top-5 left-8 bg-jsos-purple text-white w-11 h-11 rounded-xl flex items-center justify-center font-black border border-jsos-purpleLight/20 text-lg shadow-[0_4px_15px_rgba(102,51,153,0.4)]">
-                            1
+                    <div class="interactive-hover-card p-[1px] rounded-2xl overflow-hidden reveal-element">
+                        <div class="glass-card p-8 lg:p-10 rounded-2xl border border-white/5 relative h-full w-full">
+                            <div class="absolute -top-5 left-8 bg-jsos-purple text-white w-11 h-11 rounded-xl flex items-center justify-center font-black border border-jsos-purpleLight/20 text-lg shadow-[0_4px_15px_rgba(102,51,153,0.4)]">
+                                1
+                            </div>
+                            <h4 class="text-xl lg:text-2xl font-bold text-white mb-3 mt-2 font-heading tracking-tight">Configure Your Scope</h4>
+                            <p class="text-sm lg:text-base text-jsos-grey leading-relaxed font-medium">
+                                Utilize our transparent blueprint investment module below to custom configure your operational requirements and scaling parameters in real time.
+                            </p>
                         </div>
-                        <h4 class="text-xl lg:text-2xl font-bold text-white mb-3 mt-2 font-heading tracking-tight">Configure Your Scope</h4>
-                        <p class="text-sm lg:text-base text-jsos-grey leading-relaxed font-medium">
-                            Utilize our transparent blueprint investment module below to custom configure your operational requirements and scaling parameters in real time.
-                        </p>
                     </div>
 
-                    <div class="glass-card p-8 lg:p-10 rounded-2xl border border-white/5 relative reveal-element delay-100">
-                        <div class="absolute -top-5 left-8 bg-jsos-purple text-white w-11 h-11 rounded-xl flex items-center justify-center font-black border border-jsos-purpleLight/20 text-lg shadow-[0_4px_15px_rgba(102,51,153,0.4)]">
-                            2
+                    <div class="interactive-hover-card p-[1px] rounded-2xl overflow-hidden reveal-element">
+                        <div class="glass-card p-8 lg:p-10 rounded-2xl border border-white/5 relative h-full w-full">
+                            <div class="absolute -top-5 left-8 bg-jsos-purple text-white w-11 h-11 rounded-xl flex items-center justify-center font-black border border-jsos-purpleLight/20 text-lg shadow-[0_4px_15px_rgba(102,51,153,0.4)]">
+                                2
+                            </div>
+                            <h4 class="text-xl lg:text-2xl font-bold text-white mb-3 mt-2 font-heading tracking-tight">Lock In Parameters</h4>
+                            <p class="text-sm lg:text-base text-jsos-grey leading-relaxed font-medium">
+                                Submit your verified calculator dashboard report or connect via one-click WhatsApp. We'll verify your specifications through a straightforward consulting review session.
+                            </p>
                         </div>
-                        <h4 class="text-xl lg:text-2xl font-bold text-white mb-3 mt-2 font-heading tracking-tight">Lock In Parameters</h4>
-                        <p class="text-sm lg:text-base text-jsos-grey leading-relaxed font-medium">
-                            Submit your verified calculator dashboard report or connect via one-click WhatsApp. We'll verify your specifications through a straightforward consulting review session.
-                        </p>
                     </div>
 
-                    <div class="glass-card p-8 lg:p-10 rounded-2xl border border-white/5 relative reveal-element delay-200">
-                        <div class="absolute -top-5 left-8 bg-jsos-purple text-white w-11 h-11 rounded-xl flex items-center justify-center font-black border border-jsos-purpleLight/20 text-lg shadow-[0_4px_15px_rgba(102,51,153,0.4)]">
-                            3
+                    <div class="interactive-hover-card p-[1px] rounded-2xl overflow-hidden reveal-element">
+                        <div class="glass-card p-8 lg:p-10 rounded-2xl border border-white/5 relative h-full w-full">
+                            <div class="absolute -top-5 left-8 bg-jsos-purple text-white w-11 h-11 rounded-xl flex items-center justify-center font-black border border-jsos-purpleLight/20 text-lg shadow-[0_4px_15px_rgba(102,51,153,0.4)]">
+                                3
+                            </div>
+                            <h4 class="text-xl lg:text-2xl font-bold text-white mb-3 mt-2 font-heading tracking-tight">Hands-Off Production</h4>
+                            <p class="text-sm lg:text-base text-jsos-grey leading-relaxed font-medium">
+                                While we implement the clean architecture blueprint, execute edge optimization protocols, and lock down secure hosting paths, you remain completely focused on scaling business operations.
+                            </p>
                         </div>
-                        <h4 class="text-xl lg:text-2xl font-bold text-white mb-3 mt-2 font-heading tracking-tight">Hands-Off Production</h4>
-                        <p class="text-sm lg:text-base text-jsos-grey leading-relaxed font-medium">
-                            While we implement the clean architecture blueprint, execute edge optimization protocols, and lock down secure hosting paths, you remain completely focused on scaling business operations.
-                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="estimator" class="py-40 relative bg-jsos-darkgrey/40 border-t border-white/5 z-20 xl:px-12">
+        <section id="estimator" class="py-40 relative bg-jsos-darkgrey border-t border-white/5 z-20 xl:px-12">
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute bottom-1/4 left-10 w-4 h-4 bg-purple-500/10 rounded-full blur-[1px] parallax-bg" data-speed="0.19"></div>
+            </div>
+
             <div class="max-w-6xl mx-auto px-6">
                 <div class="watermark-container text-center mb-24 reveal-element">
                     <span class="watermark-text">INVESTMENT</span>
@@ -287,68 +324,70 @@ import Layout from '../layouts/Layout.astro';
                     <h3 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white font-heading relative z-10">Build Your Deployment Plan</h3>
                 </div>
 
-                <div class="glass-card p-8 md:p-12 lg:p-16 rounded-3xl border border-white/10 space-y-10 relative overflow-hidden reveal-element">
-                    <p class="text-center text-jsos-grey text-base lg:text-lg font-medium max-w-xl mx-auto">Adjust the operational parameters below to generate an analytical development estimate tailored to your company's scaling needs.</p>
-                    
-                    <div class="grid md:grid-cols-12 gap-12 lg:gap-16 pt-4 items-center">
-                        <div class="md:col-span-7 space-y-10">
-                            <div>
-                                <label class="flex justify-between items-center text-xs font-bold uppercase tracking-widest text-white mb-4" id="pageLabel" for="pageRange">
-                                    <span>Core Informational Pages:</span>
-                                    <span class="text-jsos-purpleLight text-xl font-black bg-jsos-purple/10 border border-jsos-purple/30 px-4 py-1.5 rounded-lg" id="pageValue">5</span>
-                                </label>
-                                <div class="relative flex items-center py-2">
-                                    <input type="range" min="1" max="25" value="5" class="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-jsos-purpleLight focus:outline-none focus:ring-2 focus:ring-jsos-purpleLight/50" id="pageRange">
+                <div class="interactive-hover-card p-[1px] rounded-3xl overflow-hidden reveal-element">
+                    <div class="glass-card p-8 md:p-12 lg:p-16 rounded-3xl border border-white/10 space-y-10 relative overflow-hidden h-full w-full">
+                        <p class="text-center text-jsos-grey text-base lg:text-lg font-medium max-w-xl mx-auto">Adjust the operational parameters below to generate an analytical development estimate tailored to your company's scaling needs.</p>
+                        
+                        <div class="grid md:grid-cols-12 gap-12 lg:gap-16 pt-4 items-center">
+                            <div class="md:col-span-7 space-y-10">
+                                <div>
+                                    <label class="flex justify-between items-center text-xs font-bold uppercase tracking-widest text-white mb-4" id="pageLabel" for="pageRange">
+                                        <span>Core Informational Pages:</span>
+                                        <span class="text-jsos-purpleLight text-xl font-black bg-jsos-purple/10 border border-jsos-purple/30 px-4 py-1.5 rounded-lg" id="pageValue">5</span>
+                                    </label>
+                                    <div class="relative flex items-center py-2">
+                                        <input type="range" min="1" max="25" value="5" class="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-jsos-purpleLight focus:outline-none focus:ring-2 focus:ring-jsos-purpleLight/50" id="pageRange">
+                                    </div>
+                                    <div class="flex justify-between text-[10px] text-jsos-darkGreyText mt-2 font-bold tracking-wider uppercase">
+                                        <span>1 Single Page</span>
+                                        <span>12 Core Layouts</span>
+                                        <span>25 Massive Platform</span>
+                                    </div>
                                 </div>
-                                <div class="flex justify-between text-[10px] text-jsos-darkGreyText mt-2 font-bold tracking-wider uppercase">
-                                    <span>1 Single Page</span>
-                                    <span>12 Core Layouts</span>
-                                    <span>25 Massive Platform</span>
+
+                                <div class="space-y-4">
+                                    <span class="block text-xs font-bold uppercase tracking-widest text-white mb-2">Integrated Platform Functionality</span>
+                                    <div class="grid gap-4">
+                                        <label class="flex items-center gap-4 p-4.5 bg-jsos-black/40 hover:bg-white/[0.03] border border-white/5 hover:border-jsos-purpleLight/30 rounded-xl cursor-pointer transition-all duration-200 select-none">
+                                            <input type="checkbox" id="ecommerceOpt" class="w-5 h-5 rounded text-jsos-purple accent-jsos-purpleLight cursor-pointer">
+                                            <div class="flex-1">
+                                                <span class="block text-sm lg:text-base font-bold text-white leading-none">Online Checkout & Multi-Channel Booking</span>
+                                                <span class="block text-xs text-jsos-purpleLight font-bold mt-1.5">+£950 Add-on Architecture</span>
+                                            </div>
+                                        </label>
+                                        
+                                        <label class="flex items-center gap-4 p-4.5 bg-jsos-black/40 hover:bg-white/[0.03] border border-white/5 hover:border-jsos-purpleLight/30 rounded-xl cursor-pointer transition-all duration-200 select-none">
+                                            <input type="checkbox" id="cmsOpt" class="w-5 h-5 rounded text-jsos-purple accent-jsos-purpleLight cursor-pointer">
+                                            <div class="flex-1">
+                                                <span class="block text-sm lg:text-base font-bold text-white leading-none">Content Production & Editing Dashboard</span>
+                                                <span class="block text-xs text-jsos-purpleLight font-bold mt-1.5">+£600 Add-on Architecture</span>
+                                            </div>
+                                        </label>
+                                        
+                                        <label class="flex items-center gap-4 p-4.5 bg-jsos-black/40 hover:bg-white/[0.03] border border-white/5 hover:border-jsos-purpleLight/30 rounded-xl cursor-pointer transition-all duration-200 select-none">
+                                            <input type="checkbox" id="seoOpt" checked class="w-5 h-5 rounded text-jsos-purple accent-jsos-purpleLight cursor-pointer">
+                                            <div class="flex-1">
+                                                <span class="block text-sm lg:text-base font-bold text-white leading-none">Local Competitor Search SEO Dominance</span>
+                                                <span class="block text-xs text-jsos-purpleLight font-bold mt-1.5">+£350 Setup Included</span>
+                                            </div>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="space-y-4">
-                                <span class="block text-xs font-bold uppercase tracking-widest text-white mb-2">Integrated Platform Functionality</span>
-                                <div class="grid gap-4">
-                                    <label class="flex items-center gap-4 p-4.5 bg-jsos-black/40 hover:bg-white/[0.03] border border-white/5 hover:border-jsos-purpleLight/30 rounded-xl cursor-pointer transition-all duration-200 select-none">
-                                        <input type="checkbox" id="ecommerceOpt" class="w-5 h-5 rounded text-jsos-purple accent-jsos-purpleLight cursor-pointer">
-                                        <div class="flex-1">
-                                            <span class="block text-sm lg:text-base font-bold text-white leading-none">Online Checkout & Multi-Channel Booking</span>
-                                            <span class="block text-xs text-jsos-purpleLight font-bold mt-1.5">+£950 Add-on Architecture</span>
-                                        </div>
-                                    </label>
-                                    
-                                    <label class="flex items-center gap-4 p-4.5 bg-jsos-black/40 hover:bg-white/[0.03] border border-white/5 hover:border-jsos-purpleLight/30 rounded-xl cursor-pointer transition-all duration-200 select-none">
-                                        <input type="checkbox" id="cmsOpt" class="w-5 h-5 rounded text-jsos-purple accent-jsos-purpleLight cursor-pointer">
-                                        <div class="flex-1">
-                                            <span class="block text-sm lg:text-base font-bold text-white leading-none">Content Production & Editing Dashboard</span>
-                                            <span class="block text-xs text-jsos-purpleLight font-bold mt-1.5">+£600 Add-on Architecture</span>
-                                        </div>
-                                    </label>
-                                    
-                                    <label class="flex items-center gap-4 p-4.5 bg-jsos-black/40 hover:bg-white/[0.03] border border-white/5 hover:border-jsos-purpleLight/30 rounded-xl cursor-pointer transition-all duration-200 select-none">
-                                        <input type="checkbox" id="seoOpt" checked class="w-5 h-5 rounded text-jsos-purple accent-jsos-purpleLight cursor-pointer">
-                                        <div class="flex-1">
-                                            <span class="block text-sm lg:text-base font-bold text-white leading-none">Local Competitor Search SEO Dominance</span>
-                                            <span class="block text-xs text-jsos-purpleLight font-bold mt-1.5">+£350 Setup Included</span>
-                                        </div>
-                                    </label>
+                            <div class="md:col-span-5 bg-gradient-to-br from-jsos-purple/20 via-jsos-purple/5 to-transparent border border-jsos-purple/40 rounded-2xl p-8 lg:p-10 flex flex-col justify-between items-center text-center relative overflow-hidden self-stretch">
+                                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(102,51,153,0.15)_0%,transparent_60%)] pointer-events-none"></div>
+                                <div class="w-full space-y-4 relative z-10">
+                                    <span class="text-[10px] uppercase tracking-widest text-jsos-purpleLight font-black block">Estimated Initial Investment</span>
+                                    <span class="text-5xl md:text-6xl font-black font-heading tracking-tight text-white block" id="estimatedTotal">£1,450</span>
+                                    <div class="text-[11px] text-jsos-darkGreyText font-medium bg-jsos-black/50 border border-white/5 rounded-lg py-2 px-3 inline-block mx-auto">
+                                        <i class="fa-solid fa-layer-group text-jsos-purpleLight mr-1.5"></i> Managed Edge Deployment Included
+                                    </div>
                                 </div>
+                                <a href="#contact" id="claimEstimateBtn" class="w-full mt-10 py-5 bg-jsos-purple text-white font-extrabold rounded-xl hover:bg-purple-700 hover:shadow-[0_0_20px_rgba(102,51,153,0.6)] active:scale-98 transition-all text-center text-sm uppercase tracking-widest">
+                                    Lock In This Estimate
+                                </a>
                             </div>
-                        </div>
-
-                        <div class="md:col-span-5 bg-gradient-to-br from-jsos-purple/20 via-jsos-purple/5 to-transparent border border-jsos-purple/40 rounded-2xl p-8 lg:p-10 flex flex-col justify-between items-center text-center relative overflow-hidden self-stretch">
-                            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(102,51,153,0.15)_0%,transparent_60%)] pointer-events-none"></div>
-                            <div class="w-full space-y-4 relative z-10">
-                                <span class="text-[10px] uppercase tracking-widest text-jsos-purpleLight font-black block">Estimated Initial Investment</span>
-                                <span class="text-5xl md:text-6xl font-black font-heading tracking-tight text-white block" id="estimatedTotal">£1,450</span>
-                                <div class="text-[11px] text-jsos-darkGreyText font-medium bg-jsos-black/50 border border-white/5 rounded-lg py-2 px-3 inline-block mx-auto">
-                                    <i class="fa-solid fa-layer-group text-jsos-purpleLight mr-1.5"></i> Managed Edge Deployment Included
-                                </div>
-                            </div>
-                            <a href="#contact" id="claimEstimateBtn" class="w-full mt-10 py-5 bg-jsos-purple text-white font-extrabold rounded-xl hover:bg-purple-700 hover:shadow-[0_0_20px_rgba(102,51,153,0.6)] active:scale-98 transition-all text-center text-sm uppercase tracking-widest">
-                                Lock In This Estimate
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -379,7 +418,7 @@ import Layout from '../layouts/Layout.astro';
                         </div>
                     </div>
                     
-                    <div class="portfolio-grid-item border border-white/10 relative group cursor-pointer h-[420px] rounded-2xl overflow-hidden reveal-element delay-100" data-category="ecommerce">
+                    <div class="portfolio-grid-item border border-white/10 relative group cursor-pointer h-[420px] rounded-2xl overflow-hidden reveal-element" data-category="ecommerce">
                         <div class="w-full h-full bg-gradient-to-br from-indigo-950/40 to-black absolute inset-0 opacity-60 z-10 mix-blend-multiply"></div>
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 scale-100 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80');"></div>
                         <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 lg:p-10 z-20">
@@ -388,7 +427,7 @@ import Layout from '../layouts/Layout.astro';
                         </div>
                     </div>
                     
-                    <div class="portfolio-grid-item border border-white/10 relative group cursor-pointer h-[420px] rounded-2xl overflow-hidden reveal-element delay-200" data-category="custom">
+                    <div class="portfolio-grid-item border border-white/10 relative group cursor-pointer h-[420px] rounded-2xl overflow-hidden reveal-element" data-category="custom">
                         <div class="w-full h-full bg-gradient-to-br from-violet-950/40 to-black absolute inset-0 opacity-60 z-10 mix-blend-multiply"></div>
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 scale-100 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80');"></div>
                         <div class="portfolio-overlay absolute inset-0 flex flex-col justify-end p-8 lg:p-10 z-20">
@@ -400,9 +439,9 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </section>
 
-        <section id="contact" class="py-40 relative bg-jsos-darkgrey/30 border-t border-white/5 overflow-hidden z-20 xl:px-12">
-            <div class="absolute inset-0 pointer-events-none parallax-bg" data-speed="0.08">
-                <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-jsos-purple/5 rounded-full blur-[160px]"></div>
+        <section id="contact" class="py-40 relative bg-jsos-darkgrey border-t border-white/5 overflow-hidden z-20 xl:px-12">
+            <div class="absolute inset-0 pointer-events-none">
+                <div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-jsos-purple/5 rounded-full blur-[160px] parallax-bg" data-speed="0.05"></div>
             </div>
             
             <div class="max-w-4xl mx-auto px-6">
@@ -412,60 +451,62 @@ import Layout from '../layouts/Layout.astro';
                     <h3 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white font-heading relative z-10">Start Your Custom Build</h3>
                 </div>
 
-                <div class="glass-card p-8 md:p-12 lg:p-16 rounded-3xl border border-white/10 relative overflow-hidden shadow-2xl reveal-element">
-                    <div id="contactFormWrapper">
-                        <form id="jsosContactForm" class="space-y-8">
-                            <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
-                                <div>
-                                    <label class="block text-xs font-bold uppercase tracking-widest text-white/90 mb-3" for="formName">Your Name</label>
-                                    <input type="text" name="name" id="formName" required class="w-full bg-jsos-black/80 border border-white/10 rounded-xl px-5 py-4.5 text-white placeholder-white/30 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium">
+                <div class="interactive-hover-card p-[1px] rounded-3xl overflow-hidden reveal-element">
+                    <div class="glass-card p-8 md:p-12 lg:p-16 rounded-3xl border border-white/10 relative overflow-hidden shadow-2xl h-full w-full">
+                        <div id="contactFormWrapper">
+                            <form id="jsosContactForm" class="space-y-8">
+                                <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+                                    <div>
+                                        <label class="block text-xs font-bold uppercase tracking-widest text-white/90 mb-3" for="formName">Your Name</label>
+                                        <input type="text" name="name" id="formName" required class="w-full bg-jsos-black/80 border border-white/10 rounded-xl px-5 py-4.5 text-white placeholder-white/30 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold uppercase tracking-widest text-white/90 mb-3" for="formEmail">Email Address</label>
+                                        <input type="email" name="email" id="formEmail" required class="w-full bg-jsos-black/80 border border-white/10 rounded-xl px-5 py-4.5 text-white placeholder-white/30 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium">
+                                    </div>
                                 </div>
-                                <div>
-                                    <label class="block text-xs font-bold uppercase tracking-widest text-white/90 mb-3" for="formEmail">Email Address</label>
-                                    <input type="email" name="email" id="formEmail" required class="w-full bg-jsos-black/80 border border-white/10 rounded-xl px-5 py-4.5 text-white placeholder-white/30 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium">
-                                </div>
-                            </div>
 
-                            <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
-                                <div>
-                                    <label class="block text-xs font-bold uppercase tracking-widest text-white/90 mb-3" for="formPhone">Phone Number</label>
-                                    <input type="tel" name="phone" id="formPhone" class="w-full bg-jsos-black/80 border border-white/10 rounded-xl px-5 py-4.5 text-white placeholder-white/30 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold uppercase tracking-widest text-white/90 mb-3" for="formTimeline">Target Launch Timeline</label>
-                                    <div class="relative">
-                                        <select name="timeline" id="formTimeline" class="w-full bg-jsos-black/80 border border-white/10 rounded-xl px-5 py-4.5 text-white focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium appearance-none cursor-pointer">
-                                            <option value="Urgent">Immediate Demand (&lt; 2 Weeks)</option>
-                                            <option value="Standard" selected>Standard Lifecycle (3-4 Weeks)</option>
-                                            <option value="Flexible">Planning Phase Configuration</option>
-                                        </select>
-                                        <div class="absolute inset-y-0 right-5 flex items-center pointer-events-none text-jsos-purpleLight">
-                                            <i class="fa-solid fa-chevron-down text-sm"></i>
+                                <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+                                    <div>
+                                        <label class="block text-xs font-bold uppercase tracking-widest text-white/90 mb-3" for="formPhone">Phone Number</label>
+                                        <input type="tel" name="phone" id="formPhone" class="w-full bg-jsos-black/80 border border-white/10 rounded-xl px-5 py-4.5 text-white placeholder-white/30 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-bold uppercase tracking-widest text-white/90 mb-3" for="formTimeline">Target Launch Timeline</label>
+                                        <div class="relative">
+                                            <select name="timeline" id="formTimeline" class="w-full bg-jsos-black/80 border border-white/10 rounded-xl px-5 py-4.5 text-white focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium appearance-none cursor-pointer">
+                                                <option value="Urgent">Immediate Demand (&lt; 2 Weeks)</option>
+                                                <option value="Standard" selected>Standard Lifecycle (3-4 Weeks)</option>
+                                                <option value="Flexible">Planning Phase Configuration</option>
+                                            </select>
+                                            <div class="absolute inset-y-0 right-5 flex items-center pointer-events-none text-jsos-purpleLight">
+                                                <i class="fa-solid fa-chevron-down text-sm"></i>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div>
-                                <label class="block text-xs font-bold uppercase tracking-widest text-white/90 mb-3" for="formMessage">Tell Us About Your Enterprise Target</label>
-                                <textarea name="message" id="formMessage" rows="5" required placeholder="Describe your target market demographic or any baseline performance layout errors your current application profile is facing..." class="w-full bg-jsos-black/80 border border-white/10 rounded-xl px-5 py-4.5 text-white placeholder-white/30 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium"></textarea>
-                            </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase tracking-widest text-white/90 mb-3" for="formMessage">Tell Us About Your Enterprise Target</label>
+                                    <textarea name="message" id="formMessage" rows="5" required placeholder="Describe your target market demographic or any baseline performance layout errors your current application profile is facing..." class="w-full bg-jsos-black/80 border border-white/10 rounded-xl px-5 py-4.5 text-white placeholder-white/30 focus:outline-none focus:border-jsos-purpleLight focus:ring-2 focus:ring-jsos-purpleLight/25 transition-all text-base font-medium"></textarea>
+                                </div>
 
-                            <div class="pt-4">
-                                <button type="submit" class="w-full py-5 bg-jsos-purple text-white font-extrabold uppercase tracking-widest rounded-xl hover:bg-purple-700 hover:shadow-[0_0_30px_rgba(102,51,153,0.6)] active:scale-98 transition-all duration-300 text-sm">
-                                    Request Free Consultation & Website Review
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div id="formSuccessState" class="hidden text-center py-16 space-y-6">
-                        <div class="w-20 h-20 bg-green-500/10 border border-green-500/30 rounded-full flex items-center justify-center mx-auto text-green-400 text-3xl shadow-[0_0_20px_rgba(34,197,94,0.2)]">
-                            <i class="fa-solid fa-circle-check"></i>
+                                <div class="pt-4">
+                                    <button type="submit" class="w-full py-5 bg-jsos-purple text-white font-extrabold uppercase tracking-widest rounded-xl hover:bg-purple-700 hover:shadow-[0_0_30px_rgba(102,51,153,0.6)] active:scale-98 transition-all duration-300 text-sm">
+                                        Request Free Consultation & Website Review
+                                    </button>
+                                </div>
+                            </form>
                         </div>
-                        <h4 class="text-3xl font-extrabold font-heading text-white">Inquiry Securely Transmitted!</h4>
-                        <p class="text-jsos-grey max-w-md mx-auto leading-relaxed text-base font-medium">Our tech team is auditing your criteria. Expect a comprehensive architectural growth proposal via your provided inbox shortly.</p>
-                        <button id="resetFormBtn" class="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-lg hover:bg-white/10 transition-all text-xs uppercase tracking-widest font-bold">Submit Another Profile</button>
+
+                        <div id="formSuccessState" class="hidden text-center py-16 space-y-6">
+                            <div class="w-20 h-20 bg-green-500/10 border border-green-500/30 rounded-full flex items-center justify-center mx-auto text-green-400 text-3xl shadow-[0_0_20px_rgba(34,197,94,0.2)]">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <h4 class="text-3xl font-extrabold font-heading text-white">Inquiry Securely Transmitted!</h4>
+                            <p class="text-jsos-grey max-w-md mx-auto leading-relaxed text-base font-medium">Our tech team is auditing your criteria. Expect a comprehensive architectural growth proposal via your provided inbox shortly.</p>
+                            <button id="resetFormBtn" class="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-lg hover:bg-white/10 transition-all text-xs uppercase tracking-widest font-bold">Submit Another Profile</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -539,22 +580,28 @@ import Layout from '../layouts/Layout.astro';
             });
         });
 
-        // Elite Intersection Observer Rule Array for Global Viewport Animations
+        // CSS-Class Based Scroll Animation Matrix
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible-active');
-                    // Trigger numbers counters if the element contains metrics
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                    
                     if (entry.target.querySelectorAll('.counter-value').length > 0) {
                         triggerCounters(entry.target);
                     }
                 }
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
+        }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
 
-        document.querySelectorAll('.reveal-element').forEach(element => revealObserver.observe(element));
+        document.querySelectorAll('.reveal-element').forEach(element => {
+            element.style.opacity = "0";
+            element.style.transform = "translateY(30px)";
+            element.style.transition = "opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)";
+            revealObserver.observe(element);
+        });
 
-        // Premium Numerical Auto-Counting Acceleration System
+        // Numerical Auto-Counting Acceleration System
         function triggerCounters(parent) {
             parent.querySelectorAll('.counter-value').forEach(counter => {
                 if (counter.classList.contains('counted')) return;
@@ -582,7 +629,7 @@ import Layout from '../layouts/Layout.astro';
             });
         }
 
-        // Smooth Pure-JS High-Performance Parallax Engine Matrix
+        // Smooth Pure-JS Parallax Engine Matrix
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             document.querySelectorAll('.parallax-bg').forEach(bg => {
@@ -592,21 +639,35 @@ import Layout from '../layouts/Layout.astro';
             });
         });
 
-        // Intelligent Typography Loop Layout Engine
+        // Fixed Typography Loop Layout Engine
         const phraseArray = ["Attract Customers.", "Load Instantly.", "Dominate Local Search."];
         let count = 0, index = 0, currentText = "", letter = "";
-        (function type() {
+        
+        function type() {
             if (count === phraseArray.length) count = 0;
             currentText = phraseArray[count];
             letter = currentText.slice(0, ++index);
+            
             const target = document.getElementById('typingText');
-            if(target) target.textContent = letter;
-            if (letter.length === currentText.length) {
-                setTimeout(() => { index = 0; count++; setTimeout(type, 1200); }, 2200);
-            } else {
-                setTimeout(type, 65);
+            if (target) {
+                target.innerHTML = letter + '<span class="animate-pulse font-light text-jsos-purpleLight">|</span>';
             }
-        }());
+            
+            if (letter.length === currentText.length) {
+                setTimeout(() => { 
+                    index = 0; 
+                    count++; 
+                    setTimeout(type, 800); 
+                }, 2000);
+            } else {
+                setTimeout(type, 75);
+            }
+        }
+        
+        // Init typewriter configuration on clear visibility hooks
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(type, 500);
+        });
 
         // Automated Pricing Engine Calculator Setup
         const pageRange = document.getElementById('pageRange');
@@ -652,7 +713,7 @@ import Layout from '../layouts/Layout.astro';
                 filterBtns.forEach(b => b.classList.add('border-white/5', 'text-jsos-grey'));
                 btn.classList.remove('border-white/5', 'text-jsos-grey');
                 btn.classList.add('bg-jsos-purple', 'text-white');
-                
+                 
                 const filter = btn.getAttribute('data-filter');
                 items.forEach(item => {
                     if(filter === 'all' || item.getAttribute('data-category') === filter) {
@@ -685,25 +746,35 @@ import Layout from '../layouts/Layout.astro';
             });
         }
 
-        // Interactive Mouse Cursor Tracker glow logic
+        // Dynamic Proximity Mouse Glow Matrix Framework
         document.querySelectorAll('.interactive-hover-card').forEach(card => {
+            card.style.position = "relative";
+            card.style.transition = "background 0.3s ease";
+            
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
+                
+                // Generates smooth radial illumination surrounding cursor position coordinates
+                card.style.background = `radial-gradient(450px circle at ${x}px ${y}px, rgba(192, 132, 252, 0.18), transparent 80%)`;
+                card.style.borderColor = "rgba(192, 132, 252, 0.35)";
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.background = "transparent";
+                card.style.borderColor = "rgba(255, 255, 255, 0.08)";
             });
         });
 
-        // HIGH-VISIBILITY INTERACTIVE PARTICLE CANVAS ARCHITECTURE
+        // Optimized Vector Particle Canvas Matrix Loop
         const canvas = document.getElementById('polygonCanvas');
         const ctx = canvas.getContext('2d');
         let points = [];
-        const numPoints = 55;
-        const baseMaxDist = 160;
-        let mousePos = { x: null, y: null, maxDist: 220 };
-
+        const numPoints = 35; // Streamlined from 55 down to 35 elements to keep mobile views responsive
+        const baseMaxDist = 175;
+        let mousePos = { x: null, y: null, maxDist: 240 };
+        
         function initCanvas() {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
@@ -712,19 +783,17 @@ import Layout from '../layouts/Layout.astro';
                 points.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
-                    vx: (Math.random() - 0.5) * 0.4,
-                    vy: (Math.random() - 0.5) * 0.4,
+                    vx: (Math.random() - 0.5) * 0.35,
+                    vy: (Math.random() - 0.5) * 0.35,
                     r: Math.random() * 2 + 1.5
                 });
             }
         }
 
-        // Connect cursor interactive tracking hooks
         window.addEventListener('mousemove', (e) => {
             mousePos.x = e.clientX;
             mousePos.y = e.clientY;
         });
-
         window.addEventListener('mouseout', () => {
             mousePos.x = null;
             mousePos.y = null;
@@ -733,15 +802,16 @@ import Layout from '../layouts/Layout.astro';
         function drawPoints() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
-            // Render connecting nodes logic path loops
+            // Render connecting nodes logic using an optimized path layout strategy
+            ctx.lineWidth = 1.0;
+            
             for (let i = 0; i < points.length; i++) {
                 // Interactive Cursor Mesh Manipulation attraction code
                 if (mousePos.x !== null && mousePos.y !== null) {
                     const mDist = Math.hypot(points[i].x - mousePos.x, points[i].y - mousePos.y);
                     if (mDist < mousePos.maxDist) {
-                        const mAlpha = (1 - mDist / mousePos.maxDist) * 0.35;
+                        const mAlpha = (1 - mDist / mousePos.maxDist) * 0.45; // Increased line clarity opacity target
                         ctx.strokeStyle = `rgba(192, 132, 252, ${mAlpha})`;
-                        ctx.lineWidth = 1.2;
                         ctx.beginPath();
                         ctx.moveTo(points[i].x, points[i].y);
                         ctx.lineTo(mousePos.x, mousePos.y);
@@ -752,9 +822,8 @@ import Layout from '../layouts/Layout.astro';
                 for (let j = i + 1; j < points.length; j++) {
                     const dist = Math.hypot(points[i].x - points[j].x, points[i].y - points[j].y);
                     if (dist < baseMaxDist) {
-                        const alpha = (1 - dist / baseMaxDist) * 0.28;
+                        const alpha = (1 - dist / baseMaxDist) * 0.38; // Upgraded connection line opacity constraints
                         ctx.strokeStyle = `rgba(192, 132, 252, ${alpha})`; 
-                        ctx.lineWidth = 0.9;
                         ctx.beginPath();
                         ctx.moveTo(points[i].x, points[i].y);
                         ctx.lineTo(points[j].x, points[j].y);
@@ -771,12 +840,11 @@ import Layout from '../layouts/Layout.astro';
                 if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
                 if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
                 
-                ctx.fillStyle = 'rgba(168, 85, 247, 0.65)'; 
+                ctx.fillStyle = 'rgba(168, 85, 247, 0.75)'; 
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
                 ctx.fill();
             });
-            
             requestAnimationFrame(drawPoints);
         }
 
