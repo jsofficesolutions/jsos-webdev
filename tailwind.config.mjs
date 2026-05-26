@@ -6,9 +6,11 @@ export default {
       colors: {
         jsos: {
           purple: '#663399',
+          purpleLight: '#C084FC', // Highly legible light violet for small text/labels on dark backgrounds
           black: '#0C0910',
           darkgrey: '#141118',
-          grey: '#898989',
+          grey: '#D4D4D8', // Upgraded from #898989 for strict WCAG AA contrast compliance
+          darkGreyText: '#9CA3AF', // Helper for secondary descriptions
           light: '#ffffff'
         }
       },
