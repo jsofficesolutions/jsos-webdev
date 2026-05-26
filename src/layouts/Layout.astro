@@ -1,0 +1,28 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="JS Office Solutions - Bespoke Web Development for Small Businesses." />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-jsos-black text-jsos-light font-sans antialiased">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	::selection {
+		background-color: #663399;
+		color: #ffffff;
+	}
+</style>
