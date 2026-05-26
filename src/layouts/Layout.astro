@@ -10,19 +10,70 @@ const { title } = Astro.props;
 <html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="JS Office Solutions - Bespoke Web Development for Small Businesses." />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="JS Office Solutions - Premium Custom Web Development for Small Businesses." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 	</head>
-	<body class="bg-jsos-black text-jsos-light font-sans antialiased">
+	<body class="bg-jsos-black text-white font-sans antialiased selection:bg-jsos-purple selection:text-white overflow-x-hidden">
 		<slot />
 	</body>
 </html>
 
 <style is:global>
-	::selection {
-		background-color: #663399;
-		color: #ffffff;
+	/* Custom Scrollbar */
+	::-webkit-scrollbar { width: 8px; }
+	::-webkit-scrollbar-track { background: #0C0910; }
+	::-webkit-scrollbar-thumb { background: #663399; border-radius: 4px; }
+	::-webkit-scrollbar-thumb:hover { background: #8952c4; }
+
+	/* Glassmorphism card utilities */
+	.glass-card {
+		background: rgba(20, 17, 24, 0.7);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border: 1px solid rgba(255, 255, 255, 0.04);
+		box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+	}
+	.glass-card:hover {
+		border-color: rgba(102, 51, 153, 0.4);
+		box-shadow: 0 20px 40px -10px rgba(102, 51, 153, 0.15);
+	}
+
+	/* Portfolio Captions */
+	.portfolio-grid-item { position: relative; overflow: hidden; border-radius: 16px; }
+	.portfolio-image { transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+	.portfolio-grid-item:hover .portfolio-image { transform: scale(1.06); }
+	.portfolio-overlay {
+		background: linear-gradient(to top, rgba(12, 9, 16, 0.95) 0%, rgba(102, 51, 153, 0.85) 100%);
+		opacity: 0;
+		transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+	.portfolio-grid-item:hover .portfolio-overlay { opacity: 1; }
+
+	/* Watermark headers */
+	.watermark-container { position: relative; }
+	.watermark-text {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+		white-space: nowrap;
+		font-size: clamp(60px, 14vw, 180px);
+		font-weight: 900;
+		line-height: 1;
+		font-family: 'Montserrat', sans-serif;
+		color: transparent;
+		-webkit-text-stroke: 1px rgba(102, 51, 153, 0.08);
+		letter-spacing: 0.1em;
+		pointer-events: none;
+		user-select: none;
 	}
 </style>
